@@ -1,0 +1,1 @@
+﻿node r.js -o cssIn=../css/lib/bootstrap.css out=../css/lib/bootstrap.min.css optimizeCss=standard

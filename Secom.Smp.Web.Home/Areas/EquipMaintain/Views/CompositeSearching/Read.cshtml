@@ -1,0 +1,116 @@
+﻿@{
+    Layout = "~/Views/Shared/_Page.cshtml";
+    ViewBag.ReturnBtn = true;
+    ViewBag.ReturnUrl = "/EquipMaintain/CompositeSearching";
+}
+<!-- BEGIN CONTAINER -->
+<div class="page-content-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet-body form">
+                <form class="form-horizontal" action="#" id="submit_form" method="POST">
+                    <div class="form-wizard">
+                        <div class="form-body">
+                            <ul class="nav nav-pills nav-justified steps">
+                                <li class="active">
+                                    <a data-toggle="tab" class="step">
+                                        <span class="number"> 01 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> 待分配
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" class="step">
+                                        <span class="number"> 02 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> 待接收
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" class="step active">
+                                        <span class="number"> 03 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> 待完工
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" class="step">
+                                        <span class="number"> 04 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> 待确认
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" class="step">
+                                        <span class="number"> 05 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> 已确认
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" class="step">
+                                        <span class="number"> 06 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> 待审核
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" class="step">
+                                        <span class="number"> 04 </span>
+                                        <span class="desc">
+                                            <i class="fa fa-check"></i> 待结束
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="bar" class="progress progress-striped" role="progressbar">
+                                <div class="progress-bar progress-bar-success" style="width:14.2857%"> </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab1">
+                                    <div class="portlet box grey-steel">
+                                        <div class="portlet-title">
+                                            <div class="caption">
+                                                <i class="fa fa-gift"></i>保养信息
+                                            </div>
+                                            <div class="tools">
+                                                <a href="javascript:;" class="collapse" data-original-title="" title="展开/折叠"> </a>
+                                                <a href="" class="fullscreen" data-original-title="" title="全屏"> </a>
+                                            </div>
+                                        </div>
+                                        <div class="portlet-body" style="display: block;">
+                                            <div class="form-group headDiv">
+                                                <label class="control-label col-md-3">
+                                                    工单号：
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-6">
+                                                    工单名称：
+                                                </label>
+                                                <label class="control-label col-md-6">
+                                                    保养人员：
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/bundles/wizard")
+}
+
+

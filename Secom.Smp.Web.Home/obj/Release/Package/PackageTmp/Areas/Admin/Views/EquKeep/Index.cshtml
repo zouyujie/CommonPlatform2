@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+
+</style>
+<div class="page-content">
+        <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <i class="icon-home"></i>
+                    <a href="/Home">设备维保</a>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <span>设备保养</span>
+                </li>
+            </ul>
+        </div>
+    <div class="page-content-body">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="portlet light ">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="icon-bubble font-green-sharp"></i>
+                            <span class="caption-subject font-green-sharp bold uppercase">日期</span>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div id="divBar" style="width:100%;height:400px;"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                <div class="portlet light ">
+                    <div class="portlet-title">
+                    </div>
+                    <div class="portlet-body">
+                        <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_local"></table>
+                    </div>
+                </div>
+                <!-- END EXAMPLE TABLE PORTLET-->
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+<script src="~/Content/js/lib/echarts.min.js"></script>
+}
+

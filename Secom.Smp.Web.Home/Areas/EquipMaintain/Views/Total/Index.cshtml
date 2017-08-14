@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<style type="text/css">
+   #divTabContent .row {
+        display: none;
+}
+ #table_WorkloadTotal,#table_WorkloadTotal thead th{text-align:center;}
+</style>
+<div class="page-content-body">
+    <div class="tabbable-custom">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#" id="workloadTotal" data-toggle="tab" aria-expanded="false" onclick="Layout.loadAjaxContent('/EquipMaintain/Total/WorkloadTotal', 'divTabContent')">工作量统计</a>
+            </li>
+            <li class="">
+                <a href="#" data-toggle="tab" aria-expanded="false"  onclick="Layout.loadAjaxContent('/EquipMaintain/Total/MaintainCostsTotal','divTabContent')">保养成本统计 </a>
+            </li>
+            <li>
+                <a href="#" data-toggle="tab" aria-expanded="false"  onclick="Layout.loadAjaxContent('/EquipMaintain/Total/MaintenanceUnitAppraise','divTabContent')">维保单位评价 </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="divTabContent">
+                @{Html.RenderAction("WorkloadTotal");}
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+}

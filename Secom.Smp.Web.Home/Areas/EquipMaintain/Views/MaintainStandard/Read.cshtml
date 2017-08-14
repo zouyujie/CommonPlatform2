@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Read";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="detailModalLabel">标准详情</h4>
+</div>
+
+@using (Html.BeginForm("Update", "Log", new { area = "History" }, FormMethod.Post, new { @id = "updateForm" }))
+{
+    <div class="modal-body">
+        @*<div class="row static-info">
+            <div class="col-md-5 name"> @Html.LabelFor(x => x.Name)：</div>
+            <div class="col-md-7 value"> @Html.DisplayFor(x => x.Name, new { @class = "form-control" }) </div>
+        </div>
+        <div class="row static-info">
+            <div class="col-md-5 name"> @Html.LabelFor(x => x.CreateTime)：</div>
+            <div class="col-md-7 value">
+                @Html.DisplayFor(model => model.CreateTime,
+           new { @type = "date", @class = "form-control", @Value = Model.CreateTime.ToDateStr() })
+            </div>
+        </div>
+        <div class="row static-info">
+            <div class="col-md-5 name">@Html.LabelFor(x => x.Msg)：</div>
+            <div class="col-md-7 value">@Html.DisplayFor(x => x.Msg, new { @class = "form-control" }) </div>
+        </div>*@
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+    </div>
+}
+

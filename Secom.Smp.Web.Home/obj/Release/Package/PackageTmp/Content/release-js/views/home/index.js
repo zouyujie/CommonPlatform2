@@ -1,0 +1,1 @@
+define("views/home/index",[],function(){console.log("Navigated to Login!")});

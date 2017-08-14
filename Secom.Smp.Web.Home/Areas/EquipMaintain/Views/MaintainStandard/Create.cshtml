@@ -1,0 +1,46 @@
+﻿@model Secom.Smp.Data.Models.OperatorLog
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="defaultModalLabel">添加保养标准</h4>
+        </div>
+            @using (Html.BeginForm("Create", "Log", new { area = "History" }, FormMethod.Post, new { @id = "defaultForm" }))
+            {
+                <div class="modal-body">
+                    @*<div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.Name)：
+                                @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "请输入用户名" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.CreateTime)：
+                                <div class="input-group input-medium date date-picker">
+                                    @Html.TextBoxFor(x => x.CreateTime, new { @class = "form-control", @readonly = true })
+                                    <span class="input-group-btn">
+                                        <button class="btn default" type="button">
+                                            <i class="fa fa-calendar"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.Msg)：
+                                @Html.TextAreaFor(x => x.Msg, new { @class = "form-control", @placeholder = "请输入备注", @rows = 5 })
+                            </div>
+                        </div>
+                    </div>*@
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="submit" class="btn sbold blue">保存</button>
+                </div>
+            }
+
+@section scripts
+{
+    
+}

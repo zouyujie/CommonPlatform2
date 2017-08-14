@@ -1,0 +1,32 @@
+﻿@using Secom.Smp.ViewModel.Home
+@model System.Collections.Generic.List<Menu>
+@if (Model != null)
+{
+    var index = 0;
+    var url = "";
+    <ul class="nav navbar-nav pull-left" id="ulTopMenu">
+        <!-- DOC: Remove data-hover="megamenu-dropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->
+        <!-- onclick="Layout.loadAjaxContent('/Home/Default',undefined,undefined,false,@index)"-->
+        @foreach (Menu menu in Model)
+        {
+            index++;
+            url = index == 1 ? "/Home" : menu.LinkUrl + "/" + menu.Id;
+            if (index == 1)
+            {
+                <li class="dropdown">
+                    <a href="@url" onclick="App.startPageLoading({ animate: true });" id="menu_@menu.Id" style="padding-right:10px;" class="nav-link dropdown-toggle">
+                        <span> @menu.Text </span>
+                    </a>
+                </li>
+            }
+            else
+            {
+            <li class="dropdown">
+                <a href="@url"  id="menu_@menu.Id" style="padding-right:10px;" class="nav-link dropdown-toggle">
+                    <span> @menu.Text </span>
+                </a>
+            </li>
+            }
+        }
+    </ul>
+}

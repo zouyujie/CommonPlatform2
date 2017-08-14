@@ -1,0 +1,52 @@
+﻿@model Secom.Smp.Data.Models.Customer
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="defaultModalLabel">添加用户</h4>
+</div>
+@using (Html.BeginForm("Create", "Default", new { area = "Admin" }, FormMethod.Post, new { @id = "defaultForm" }))
+            {
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-5">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.HeadsUrl,new { @class = "control-label" })：
+                        <input type="file" id="txt_file" name="txt_file" class="file-loading" accept="image/*" />
+                        @Html.HiddenFor(x=>x.HeadsUrl,new { @id = "hidFileUrl" })
+                    </div>
+                </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Name, new { @class = "control-label" })：
+                    @Html.TextBoxFor(x => x.Name, new { @id = "Name", @placeholder = "请输入用户名", @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Address, new { @class = "control-label" })：
+                    @Html.TextBoxFor(x => x.Address, new { @id = "Address", @placeholder = "请输入地址", @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.CreateTime)：
+                    <div class="input-group input-medium date date-picker">
+                        @Html.TextBoxFor(x => x.CreateTime, new { @class = "form-control", @readonly = true })
+                        <span class="input-group-btn">
+                            <button class="btn default" type="button">
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="submit" class="btn sbold green">提交</button>
+    </div>
+}
+@section scripts
+{
+
+}

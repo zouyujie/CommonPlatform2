@@ -1,0 +1,147 @@
+﻿@model List<Secom.Smp.Data.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="/content/css/components.css" rel="stylesheet" />
+<link href="/content/js/lib/datepicker/skin/WdatePicker.css" rel="stylesheet" />
+<link href="/content/css/framework-ui.css" rel="stylesheet" />
+<div class="page-content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet light ">
+                <div class="portlet-title">
+                    <div class="caption font-dark">
+                        <i class="icon-settings font-dark"></i>
+                        <span class="caption-subject bold uppercase"> 用户列表</span>
+                    </div>
+                    <div class="actions">
+                        <div class="btn-group btn-group-devided" data-toggle="buttons">
+                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
+                                <input type="radio" name="options" class="toggle" id="option1">Actions
+                            </label>
+                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
+                                <input type="radio" name="options" class="toggle" id="option2">Settings
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="btn-group">
+                                    <button id="sample_editable_1_new" class="btn sbold green" data-toggle="modal" data-target="#userModal" >
+                                        添加用户
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="btn-group pull-right">
+                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">
+                                        Tools
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-print"></i> Print
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-pdf-o"></i> Save as PDF
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-excel-o"></i> Export to Excel
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                        <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+                                        <span></span>
+                                    </label>
+                                </th>
+                                <th> 姓名 </th>
+                                <th> 地址 </th>
+                                <th> 创建时间 </th>
+                                <th> 备注 </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null)
+                            {
+                                foreach (var v in Model)
+                                {
+                                    <tr class="odd gradeX">
+                                        <td>
+                                            <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                                <input type="checkbox" class="checkboxes" value="1" />
+                                                <span></span>
+                                            </label>
+                                        </td>
+                                        <td> @v.Name </td>
+                                        <td>
+                                           @v.Address
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm label-success"> @v.CreateTime </span>
+                                        </td>
+                                        <td class="center"> @v.Msg</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="userModalLabel">添加用户</h4>
+                </div>
+                <form id="userFrom">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="Name" class="control-label">用户名:</label>
+                            <input type="text" class="form-control required" name="Name" id="Name" placeholder="请输入用户名">
+                        </div>
+                        <div class="form-group">
+                            <label for="Address" class="control-label">地址:</label>
+                            <input type="text" class="form-control required" name="Address" id="Address" placeholder="请输入地址">
+                        </div>
+                        <div class="form-group">
+                            <label for="CreateTime" class="control-label">创建日期:</label>
+                            <input id="CreateTime" name="CreateTime" type="text" class="form-control input-wdatepicker" onfocus="WdatePicker()" />
+                        <div class="form-group">
+                            <label for="Msg" class="control-label">备注:</label>
+                            <textarea class="form-control" id="Msg" name="Msg"></textarea>
+                        </div>
+                    </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="submit" id="btnSubmit" class="btn sbold green">添加</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>

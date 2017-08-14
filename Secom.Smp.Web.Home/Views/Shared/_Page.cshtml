@@ -1,0 +1,47 @@
+﻿@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/fileinput")
+</head>
+<body>
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            @ViewBag.HeadString
+            @ViewBag.SubHeadString
+        </ul>
+        <div class="form-group" style="float:right;margin:4px 0px 0px 0px">
+            @if (ViewBag.AddBtn == true)
+            {
+                <button id="btnSearch" class="btn light-blue" onclick="DataTablesObj.doCreateModal('@ViewBag.AddUrl')">
+                    <i class="fa fa-plus"></i>添加标准
+                </button>
+            }
+            @if (ViewBag.PrintBtn == true)
+            {
+                <button id="btnSearch" class="btn light-blue" onclick="">
+                    <i class="fa fa-print"></i>打印
+                </button>
+            }
+            @if (ViewBag.ReturnBtn == true)
+            {
+                <a class='ajaxify nav-link returnLink' href='@ViewBag.ReturnUrl?MenuId=@ViewBag.MenuId'><i class='fa fa-reply'></i>返回列表</a>
+            }
+        </div>
+    </div>
+    <input type="hidden" id="hidfMenuId" value="@ViewBag.MenuId" />
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+    @Html.AutoLoadPageJs()
+    <script type="text/javascript">
+        $(function () {
+            $("#page_Home").on("click", function () {
+                $("#menu_Home").click();
+            })
+        })
+    </script>
+</body>
+</html>

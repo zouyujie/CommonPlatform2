@@ -1,0 +1,415 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>智慧机电设备运维综合管理平台</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="zh-CN" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="SMP,智慧机电设备运维综合管理平台" name="description" />
+    <meta content="紫衡技术" name="author" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    @Styles.Render("~/Content/core/css")
+    @Styles.Render("~/Content/layout/css")
+    @Styles.Render("~/Content/js/index/css")
+    @Styles.Render("~/Content/bootstrap-datetimepicker")
+    @Styles.Render("~/Content/plugins/css")
+    @Styles.Render("~/Content/home/css")
+</head>
+<!-- END HEAD -->
+<body class="page-boxed page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo ng-scope" style="overflow-x:hidden;">
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner">
+            <div style="float:left;margin-left:10px;">
+                <div class="menu-toggler sidebar-toggler">
+                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                </div>
+            </div>
+            <!-- BEGIN LOGO -->
+            <div class="topLogo">
+                <a href="/Home/Index">
+                    <img src="~/Content/img/home/Logo48.png" alt="logo" class="logo-default" style="margin-top:8px;" title="智慧机电设备运维综合管理平台" />
+                </a>
+            </div>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"></a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <!-- BEGIN PAGE ACTIONS -->
+            <!-- DOC: Remove "hide" class to enable the page header actions -->
+            <div class="page-actions">
+                <h1 class="page-title">XX医院监控平台</h1>
+            </div>
+            <!-- END PAGE ACTIONS -->
+            <!-- BEGIN MEGA MENU -->
+            <!-- DOC: Remove "hor-menu-light" class to have a horizontal menu with theme background instead of white background -->
+            <!-- DOC: This is desktop version of the horizontal menu. The mobile version is defined(duplicated) in the responsive menu below along with sidebar menu. So the horizontal menu has 2 seperate versions -->
+            <!-- END MEGA MENU -->
+            <!-- BEGIN PAGE TOP -->
+            <div class="page-top">
+                <!-- BEGIN HEADER SEARCH BOX -->
+                <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                @*<form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search..." name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>*@
+                <!-- END HEADER SEARCH BOX -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu hidden-ms hidden-xs" style="float:right;">
+                    <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+                    <div class="collapse navbar-collapse navbar-responsive-collapse">
+                        @Html.Partial("TopMenu", ViewData["TopMenu"])
+                        <ul class="nav navbar-nav pull-right">
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class below "dropdown-extended" to change the dropdown styte -->
+                            <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
+                            <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class -->
+                            <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-bell"></i>
+                                    <span class="badge badge-default"> 2 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>
+                                            <span class="bold">2条</span> 通知
+                                        </h3>
+                                        <a href="#">查看全部</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">现在</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-success">
+                                                            <i class="fa fa-plus"></i>
+                                                        </span> 空调坏了
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">9 天前</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> 空调没有关闭
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <!-- BEGIN INBOX DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-envelope-open"></i>
+                                    <span class="badge badge-default"> 1 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>
+                                            你有
+                                            <span class="bold">1</span> 条消息
+                                        </h3>
+                                        <a href="#">查看全部</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="~/Content/img/home/Logo32.png" class="img-circle" alt="">
+                                                    </span>
+                                                    <span class="subject">
+                                                        <span class="from">邓工 </span>
+                                                        <span class="time">现在 </span>
+                                                    </span>
+                                                    <span class="message"> 华润那边的一个空调有问题，要派人过来维修 </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <img alt="" class="img-circle" src="~/Content/img/home/Logo32.png" />
+                                    <span class="username username-hide-on-mobile"> @ViewBag.UserName </span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-user"></i> 我的个人信息
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/OutLogin">
+                                            <i class="icon-key"></i> 退出登录
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                            <li class="dropdown dropdown-extended quick-sidebar-toggler">
+                                <span class="sr-only">快速菜单</span>
+                                <i class="icon-logout"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    @*<div class="clearfix"> </div>*@
+    @*<div id="container"></div>*@
+    <nav class="navbar navbar-default navbar-fixed-top" id="indexNav" role="navigation" style="height:50px;margin-top:68px;">
+        <div id="indexNav" class="container-fluid col-md-12">
+            <div class="col-md-2"></div>
+            <!--header section -->
+            <div class="navbar-header col-md-10" id="navbarHeader" style="margin-left:-50px;">
+                <a class="navbar-brand active" href="#" onclick="Layout.loadAjaxContent('/OverView')">概览<span class="selected"> </span></a>
+                <a class="navbar-brand" href="#" onclick="Layout.loadAjaxContent('/AreaView')">区域<span class="selected"> </span></a>
+                <a class="navbar-brand" href="#" onclick="Layout.loadAjaxContent('/Building')">建筑<span class="selected"> </span></a>
+            </div>
+        </div>
+    </nav>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <div class="container">
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container" id="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- END SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div id="page-content" class="page-content">
+                    @RenderBody()
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+            <!-- BEGIN QUICK SIDEBAR -->
+            <a href="javascript:;" class="page-quick-sidebar-toggler">
+                <i class="icon-login"></i>
+            </a>
+            <div class="page-quick-sidebar-wrapper" data-close-on-body-click="false">
+                <div class="page-quick-sidebar">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="javascript:;" data-target="#quick_sidebar_tab_1" data-toggle="tab">
+                                代办事项
+                                <span class="badge badge-danger">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-target="#quick_sidebar_tab_2" data-toggle="tab">
+                                报警信息
+                                <span class="badge badge-success">1</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                更多操作
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li>
+                                    <a href="javascript:;" data-target="#quick_sidebar_tab_2" data-toggle="tab">
+                                        <i class="icon-bell"></i> 报警
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-target="#quick_sidebar_tab_3" data-toggle="tab">
+                                        <i class="icon-settings"></i> 设置
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active page-quick-sidebar-chat" id="quick_sidebar_tab_1">
+                            <div class="page-quick-sidebar-chat-users" data-rail-color="#ddd" data-wrapper-class="page-quick-sidebar-list">
+                                <h3 class="list-heading">紧急事项</h3>
+                                <ul class="media-list list-items">
+                                    <li class="media">
+                                        <div class="media-status">
+                                            <span class="badge badge-success">8</span>
+                                        </div>
+                                        <img class="media-object" src="~/Content/img/home/Logo32.png" alt="...">
+                                        <div class="media-body">
+                                            <h4 class="media-heading">维修</h4>
+                                            <div class="media-heading-sub"> 上门维修 </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <h3 class="list-heading">一般事项</h3>
+                                <ul class="media-list list-items">
+                                    <li class="media">
+                                        <div class="media-status">
+                                            <span class="badge badge-warning">2</span>
+                                        </div>
+                                        <img class="media-object" src="~/Content/img/home/Logo32.png" alt="...">
+                                        <div class="media-body">
+                                            <h4 class="media-heading">耗能异常</h4>
+                                            <div class="media-heading-sub"> 处理人：xx</div>
+                                            <div class="media-heading-small">时间：2017-05-6:12:30 </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane page-quick-sidebar-alerts" id="quick_sidebar_tab_2">
+                            <div class="page-quick-sidebar-alerts-list">
+                                <h3 class="list-heading">报警信息</h3>
+                                <ul class="feeds list-items">
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-info">
+                                                        <i class="fa fa-check"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc">
+                                                        华润空调问题
+                                                        <span class="label label-sm label-warning ">
+                                                            查看明细
+                                                            <i class="fa fa-share"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date"> 2017-05-6:12:30 </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane page-quick-sidebar-settings" id="quick_sidebar_tab_3">
+                            <div class="page-quick-sidebar-settings-list">
+                                <h3 class="list-heading">一般设置</h3>
+                                <ul class="list-items borderless">
+                                    <li>
+                                        开启消息提醒
+                                        <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="success" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+                                    </li>
+                                    <li>
+                                        记录错误日志
+                                        <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="danger" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+                                    </li>
+                                    <li>
+                                        开启邮件提醒
+                                        <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="success" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+                                    </li>
+                                </ul>
+                                <h3 class="list-heading">系统设置</h3>
+                                <ul class="list-items borderless">
+                                    <li>
+                                        安全级别
+                                        <select class="form-control input-inline input-sm input-small">
+                                            <option value="1">普通</option>
+                                            <option value="2" selected>中</option>
+                                            <option value="e">高</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        接收错误的邮件地址：
+                                        <input class="form-control input-inline input-sm input-small" value="5" />
+                                    </li>
+                                    <li>
+                                        邮件端口：
+                                        <input class="form-control input-inline input-sm input-small" value="3560" />
+                                    </li>
+                                    <li>
+                                        错误提醒系统
+                                        <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="danger" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+                                    </li>
+                                    <li>
+                                        错误邮件体现
+                                        <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="warning" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+                                    </li>
+                                </ul>
+                                <div class="inner-content">
+                                    <button class="btn btn-success">
+                                        <i class="icon-settings"></i> 保存设置
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END QUICK SIDEBAR -->
+        </div>
+    </div>
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer-fixed page-footer" style="text-align:center;">
+        <div class="page-footer-inner">
+            2017 &copy; 紫衡技术
+            <a target="_blank" href="http://www.cnsecom.com/">紫衡技术</a> &nbsp;|&nbsp;
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+        <!-- BEGIN QUICK NAV -->
+        <!-- END QUICK NAV -->
+    </div>
+    <!-- 此css文件放到此处是保证子页面加载完之后可以对UI组件界面样式进行覆盖 -->
+    @Styles.Render("~/Content/custom/css")
+    <link href="@Html.ThemesStylesPath()" rel="stylesheet" />
+    <!-- END FOOTER -->
+    <!--[if lt IE 9]>
+    <script src="/Content/js/browser/respond.min.js"></script>
+    <script src="/Content/js/browser/excanvas.min.js"></script>
+    <script src="/Content/js/browser/ie8.fix.min.js"></script>
+    <![endif]-->
+    @Scripts.Render("~/bundles/core")
+    @Scripts.Render("~/bundles/layouts")
+    @Scripts.Render("~/bundles/index")
+    @Scripts.Render("~/bundles/bootstrap-datetimepicker")
+    @Scripts.Render("~/bundles/echarts")
+    <script src="@Html.ScriptsPath("common/base-Datatable.js")"></script>
+    @RenderSection("scripts", required: false)
+    @Html.AutoLoadPageJs()
+    <script type="text/javascript">
+        $(function () { App.stopPageLoading();})
+    </script>
+</body>
+</html>

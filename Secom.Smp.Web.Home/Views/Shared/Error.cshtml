@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/Content/css/error.css" rel="stylesheet" />
+</head>
+<body class="page-500-full-page">
+    <div class="row">
+        <div class="col-md-12 page-500">
+            <div class="number font-red"> 500 </div>
+            <div class="details">
+                <h3>发生了错误，错误信息如下：</h3>
+                <p>
+                    @ViewData["Error"]
+                  <br />
+                </p>
+                <p>
+                    <a href="/Home/Index" class="btn red btn-outline"> 返回首页 </a>
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

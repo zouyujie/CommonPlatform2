@@ -1,0 +1,46 @@
+﻿@using Secom.Smp.Data.Models
+@model System.Collections.Generic.List<Menu>
+
+<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+<ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+    @if (Model != null)
+    {
+        var index = 0;
+        foreach (Menu menu in Model)
+        {
+            index++;
+            var className = index == 1 ? "start active open" : "";
+            //start active open
+            <li class="nav-item @className">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="@menu.ClassName"></i>
+                    <span class="title">@menu.Text</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                @if (menu.ChildrensMenu != null && menu.ChildrensMenu.Count > 0)
+                {
+                    <ul class="sub-menu">
+                        @foreach (Menu subMenu in menu.ChildrensMenu)
+                        {
+                            //start active open
+                            <li class="nav-item">
+                                <a href="@subMenu.LinkUrl" class="nav-link ">
+                                    <i class="@subMenu.ClassName"></i>
+                                    <span class="title">@subMenu.Text</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+    }
+</ul>
+

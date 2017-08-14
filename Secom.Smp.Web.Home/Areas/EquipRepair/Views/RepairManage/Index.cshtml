@@ -1,0 +1,69 @@
+﻿@model Secom.Smp.Web.Maintain.Filters.RepairSeach
+@{
+    //ViewBag.Title = "报修管理";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+<div class="page-content-body">
+    <div class="form-inline">
+        <div class="form-group">
+            <label class="control-label">工单号：</label>
+            @Html.TextBoxFor(m => m.OrdersNumer, new { @class = "form-control input-inline", @placeholder = "搜索工单号" })
+        </div>
+        <div class="form-group">
+            <label class="control-label">
+                工单状态：
+            </label>
+            @Html.EnumDropDownListFor(m => m.RepairOrderStatus, "全部", new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label class="control-label">报修部门：</label>
+            @Html.DropDownList("database-dropdownlist", ViewBag.depList as IEnumerable<SelectListItem>, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label class="control-label">报修日期：</label>
+            <div class="input-group input-medium date date-picker">
+                @Html.TextBoxFor(m => m.RepairTimeStart, new { @class = "form-control searchDateTime", @readonly = true })
+                <span class="input-group-btn">
+                    <button class="btn default" type="button">
+                        <i class="fa fa-calendar"></i>
+                    </button>
+                </span>
+                <span class="input-group-addon"> 至 </span>
+                @Html.TextBoxFor(m => m.RepairTimeEnd, new { @class = "form-control searchDateTime", @readonly = true })
+                <span class="input-group-btn">
+                    <button class="btn default" type="button">
+                        <i class="fa fa-calendar"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <button id="btnSearch" class="btn sbold green" onclick="DataTablesObj.reloadList();">
+                查询
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row"></div>
+                </div>
+            </div>
+            <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_local"></table>
+        </div>
+        <!--弹窗-->
+        <div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+            <div class="modal-dialog divModal" role="document">
+                <div class="modal-content">
+                </div>
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+</div>
+@section scripts
+{
+}

@@ -1,0 +1,75 @@
+记录时间：2017-08-11 10:42:15,601 线程ID:[42] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/8/11 10:42:15
+用户IP:::1
+发生异常页: http://localhost:33167/Home/CheckLogin
+区域: 
+控制器: Home
+视图: CheckLogin
+
+System.Web.Mvc.HttpAntiForgeryException (0x80004005): The required anti-forgery cookie "__RequestVerificationToken" is not present.
+   at System.Web.Helpers.AntiXsrf.TokenValidator.ValidateTokens(HttpContextBase httpContext, IIdentity identity, AntiForgeryToken sessionToken, AntiForgeryToken fieldToken)
+   at System.Web.Helpers.AntiXsrf.AntiForgeryWorker.Validate(HttpContextBase httpContext)
+   at System.Web.Helpers.AntiForgery.Validate()
+   at System.Web.Mvc.ValidateAntiForgeryTokenAttribute.OnAuthorization(AuthorizationContext filterContext)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+记录时间：2017-08-11 10:51:14,473 线程ID:[86] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/8/11 10:51:14
+用户IP:::1
+发生异常页: http://localhost:33167/Home/CheckLogin
+区域: 
+控制器: Home
+视图: CheckLogin
+
+System.Web.Mvc.HttpAntiForgeryException (0x80004005): The required anti-forgery form field "__RequestVerificationToken" is not present.
+   at System.Web.Helpers.AntiXsrf.TokenValidator.ValidateTokens(HttpContextBase httpContext, IIdentity identity, AntiForgeryToken sessionToken, AntiForgeryToken fieldToken)
+   at System.Web.Helpers.AntiXsrf.AntiForgeryWorker.Validate(HttpContextBase httpContext)
+   at System.Web.Helpers.AntiForgery.Validate()
+   at System.Web.Mvc.ValidateAntiForgeryTokenAttribute.OnAuthorization(AuthorizationContext filterContext)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+记录时间：2017-08-11 10:55:10,176 线程ID:[86] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/8/11 10:55:10
+用户IP:::1
+发生异常页: http://localhost:33167/Home/CheckLogin
+区域: 
+控制器: Home
+视图: CheckLogin
+
+System.Web.Mvc.HttpAntiForgeryException (0x80004005): The required anti-forgery form field "__RequestVerificationToken" is not present.
+   at System.Web.Helpers.AntiXsrf.TokenValidator.ValidateTokens(HttpContextBase httpContext, IIdentity identity, AntiForgeryToken sessionToken, AntiForgeryToken fieldToken)
+   at System.Web.Helpers.AntiXsrf.AntiForgeryWorker.Validate(HttpContextBase httpContext)
+   at System.Web.Helpers.AntiForgery.Validate()
+   at System.Web.Mvc.ValidateAntiForgeryTokenAttribute.OnAuthorization(AuthorizationContext filterContext)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+记录时间：2017-08-11 10:55:32,484 线程ID:[42] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/8/11 10:55:32
+用户IP:::1
+发生异常页: http://localhost:33167/Home/CheckLogin
+区域: 
+控制器: Home
+视图: CheckLogin
+
+System.Web.Mvc.HttpAntiForgeryException (0x80004005): The required anti-forgery form field "__RequestVerificationToken" is not present.
+   at System.Web.Helpers.AntiXsrf.TokenValidator.ValidateTokens(HttpContextBase httpContext, IIdentity identity, AntiForgeryToken sessionToken, AntiForgeryToken fieldToken)
+   at System.Web.Helpers.AntiXsrf.AntiForgeryWorker.Validate(HttpContextBase httpContext)
+   at System.Web.Helpers.AntiForgery.Validate()
+   at System.Web.Mvc.ValidateAntiForgeryTokenAttribute.OnAuthorization(AuthorizationContext filterContext)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+记录时间：2017-08-11 10:56:08,433 线程ID:[91] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/8/11 10:56:08
+用户IP:::1
+发生异常页: http://localhost:33167/Home/CheckLogin
+区域: 
+控制器: Home
+视图: CheckLogin
+
+System.Web.Mvc.HttpAntiForgeryException (0x80004005): The required anti-forgery form field "__RequestVerificationToken" is not present.
+   at System.Web.Helpers.AntiXsrf.TokenValidator.ValidateTokens(HttpContextBase httpContext, IIdentity identity, AntiForgeryToken sessionToken, AntiForgeryToken fieldToken)
+   at System.Web.Helpers.AntiXsrf.AntiForgeryWorker.Validate(HttpContextBase httpContext)
+   at System.Web.Helpers.AntiForgery.Validate()
+   at System.Web.Mvc.ValidateAntiForgeryTokenAttribute.OnAuthorization(AuthorizationContext filterContext)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)

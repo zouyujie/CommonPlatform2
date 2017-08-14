@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Bar图";
+    ViewBag.ParentTitle = "Echarts";
+    ViewBag.ParentPageUrl = "/Admin/ECharts";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+
+<!-- BEGIN CONTAINER -->
+<div class="page-content-body">
+    <div class="row">
+        <div id="charts" style="height:400px"></div>
+    </div>
+</div>
+@section scripts{
+<script src="@Html.ScriptsPath("common/base-ECharts.js")"></script> 
+}
+
+
+
+

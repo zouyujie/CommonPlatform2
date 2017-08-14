@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5144C85D-2C9A-4B80-BA87-31A6724C4B5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Secom.Smp.ECharts</RootNamespace>
+    <AssemblyName>Secom.Smp.ECharts</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\AbstractData.cs" />
+    <Compile Include="Entities\axis\AngleAxis.cs" />
+    <Compile Include="Entities\axis\Axis.cs" />
+    <Compile Include="Entities\axis\AxisData.cs" />
+    <Compile Include="Entities\axis\AxisLabel.cs" />
+    <Compile Include="Entities\axis\AxisLine.cs" />
+    <Compile Include="Entities\axis\AxisLink.cs" />
+    <Compile Include="Entities\axis\AxisName.cs" />
+    <Compile Include="Entities\axis\AxisPointer.cs" />
+    <Compile Include="Entities\axis\AxisTick.cs" />
+    <Compile Include="Entities\axis\CategoryAxis.cs" />
+    <Compile Include="Entities\axis\ChartAxis.cs" />
+    <Compile Include="Entities\axis\LogAxis.cs" />
+    <Compile Include="Entities\axis\ParallelAxis.cs" />
+    <Compile Include="Entities\axis\radiusAxis.cs" />
+    <Compile Include="Entities\axis\SingleAxis.cs" />
+    <Compile Include="Entities\axis\SplitArea.cs" />
+    <Compile Include="Entities\axis\SplitLine.cs" />
+    <Compile Include="Entities\axis\TimeAxis.cs" />
+    <Compile Include="Entities\axis\ValueAxis.cs" />
+    <Compile Include="Entities\Basic.cs" />
+    <Compile Include="Entities\bmap\BMap.cs" />
+    <Compile Include="Entities\bmap\MapStyle.cs" />
+    <Compile Include="Entities\bmap\StyleJson.cs" />
+    <Compile Include="Entities\bmap\Styler.cs" />
+    <Compile Include="Entities\bmap\VisibilityType.cs" />
+    <Compile Include="Entities\Brush.cs" />
+    <Compile Include="Entities\Calendar.cs" />
+    <Compile Include="Entities\category\XCategory.cs" />
+    <Compile Include="Entities\Chart.cs" />
+    <Compile Include="Entities\ChartData.cs" />
+    <Compile Include="Entities\ChartOption.cs" />
+    <Compile Include="Entities\Controller.cs" />
+    <Compile Include="Entities\DataRange.cs" />
+    <Compile Include="Entities\DataZoom.cs" />
+    <Compile Include="Entities\data\BasicData.cs" />
+    <Compile Include="Entities\data\Data.cs" />
+    <Compile Include="Entities\EChartEnums.cs" />
+    <Compile Include="Entities\feature\DataView.cs" />
+    <Compile Include="Entities\feature\data\FeatureData.cs" />
+    <Compile Include="Entities\feature\Feature.cs" />
+    <Compile Include="Entities\feature\FeatureBrush.cs" />
+    <Compile Include="Entities\feature\FeatureImage.cs" />
+    <Compile Include="Entities\feature\MagicOption.cs" />
+    <Compile Include="Entities\feature\MagicTitle.cs" />
+    <Compile Include="Entities\feature\MagicType.cs" />
+    <Compile Include="Entities\feature\Mark.cs" />
+    <Compile Include="Entities\feature\MarkTitle.cs" />
+    <Compile Include="Entities\feature\Range.cs" />
+    <Compile Include="Entities\feature\Restore.cs" />
+    <Compile Include="Entities\feature\Split.cs" />
+    <Compile Include="Entities\Geo.cs" />
+    <Compile Include="Entities\Grid.cs" />
+    <Compile Include="Entities\IData.cs" />
+    <Compile Include="Entities\IndicatorData.cs" />
+    <Compile Include="Entities\Legend.cs" />
+    <Compile Include="Entities\LoadingOption.cs" />
+    <Compile Include="Entities\NoDataLoadingOption.cs" />
+    <Compile Include="Entities\Parallel.cs" />
+    <Compile Include="Entities\Polar.cs" />
+    <Compile Include="Entities\Regions.cs" />
+    <Compile Include="Entities\RoamController.cs" />
+    <Compile Include="Entities\ScaleLimit.cs" />
+    <Compile Include="Entities\series\Bar.cs" />
+    <Compile Include="Entities\series\Boxplot.cs" />
+    <Compile Include="Entities\series\ChartSeries.cs" />
+    <Compile Include="Entities\series\Chord.cs" />
+    <Compile Include="Entities\series\Data\KData.cs" />
+    <Compile Include="Entities\series\Data\MapData.cs" />
+    <Compile Include="Entities\series\Data\PieData.cs" />
+    <Compile Include="Entities\series\Data\PolarData.cs" />
+    <Compile Include="Entities\series\Data\RadarData.cs" />
+    <Compile Include="Entities\series\Data\ScatterData.cs" />
+    <Compile Include="Entities\series\Data\SeriesData.cs" />
+    <Compile Include="Entities\series\Data\TreeData.cs" />
+    <Compile Include="Entities\series\EffectScatter.cs" />
+    <Compile Include="Entities\series\EventRiver.cs" />
+    <Compile Include="Entities\series\event\EventData.cs" />
+    <Compile Include="Entities\series\event\EventDetail.cs" />
+    <Compile Include="Entities\series\event\EventEvolution.cs" />
+    <Compile Include="Entities\series\Force.cs" />
+    <Compile Include="Entities\series\force\Category.cs" />
+    <Compile Include="Entities\series\force\Link.cs" />
+    <Compile Include="Entities\series\force\Node.cs" />
+    <Compile Include="Entities\series\Funnel.cs" />
+    <Compile Include="Entities\series\Gauge.cs" />
+    <Compile Include="Entities\series\Graph.cs" />
+    <Compile Include="Entities\series\graph\Force.cs" />
+    <Compile Include="Entities\series\guage\GaugeDetail.cs" />
+    <Compile Include="Entities\series\guage\GaugePointer.cs" />
+    <Compile Include="Entities\series\guage\GaugeTitle.cs" />
+    <Compile Include="Entities\series\HeatMap.cs" />
+    <Compile Include="Entities\series\heatmap\GradientColorData.cs" />
+    <Compile Include="Entities\series\K.cs" />
+    <Compile Include="Entities\series\Line.cs" />
+    <Compile Include="Entities\series\Map.cs" />
+    <Compile Include="Entities\series\mark\Bound.cs" />
+    <Compile Include="Entities\series\mark\Effect.cs" />
+    <Compile Include="Entities\series\mark\MarkArea.cs" />
+    <Compile Include="Entities\series\mark\MarkData.cs" />
+    <Compile Include="Entities\series\mark\MarkLine.cs" />
+    <Compile Include="Entities\series\mark\MarkPoint.cs" />
+    <Compile Include="Entities\series\other\AutoSizeConfig.cs" />
+    <Compile Include="Entities\series\Parallel.cs" />
+    <Compile Include="Entities\series\PictorialBar.cs" />
+    <Compile Include="Entities\series\Pie.cs" />
+    <Compile Include="Entities\series\Radar.cs" />
+    <Compile Include="Entities\series\Rectangular.cs" />
+    <Compile Include="Entities\series\RippleEffect.cs" />
+    <Compile Include="Entities\series\Sankey.cs" />
+    <Compile Include="Entities\series\Scatter.cs" />
+    <Compile Include="Entities\series\Series.cs" />
+    <Compile Include="Entities\series\ThemeRiver.cs" />
+    <Compile Include="Entities\series\Tree.cs" />
+    <Compile Include="Entities\series\TreeMap.cs" />
+    <Compile Include="Entities\series\tree\LocationData.cs" />
+    <Compile Include="Entities\series\Venn.cs" />
+    <Compile Include="Entities\series\WordCloud.cs" />
+    <Compile Include="Entities\style\AreaStyle.cs" />
+    <Compile Include="Entities\style\BrushStyle.cs" />
+    <Compile Include="Entities\style\CalendarLabel.cs" />
+    <Compile Include="Entities\style\CheckPointStyle.cs" />
+    <Compile Include="Entities\style\ChordStyle.cs" />
+    <Compile Include="Entities\style\ControlStyle.cs" />
+    <Compile Include="Entities\style\Emphasis.cs" />
+    <Compile Include="Entities\style\EntityStyle.cs" />
+    <Compile Include="Entities\style\IconStyle.cs" />
+    <Compile Include="Entities\style\ItemStyle.cs" />
+    <Compile Include="Entities\style\LabelLine.cs" />
+    <Compile Include="Entities\style\LineLabelStyle.cs" />
+    <Compile Include="Entities\style\LineStyle.cs" />
+    <Compile Include="Entities\style\LinkStyle.cs" />
+    <Compile Include="Entities\style\NodeStyle.cs" />
+    <Compile Include="Entities\style\Normal.cs" />
+    <Compile Include="Entities\style\PiecesStyle.cs" />
+    <Compile Include="Entities\style\Style.cs" />
+    <Compile Include="Entities\style\StyleLabel.cs" />
+    <Compile Include="Entities\style\TextStyle.cs" />
+    <Compile Include="Entities\TimeLine.cs" />
+    <Compile Include="Entities\Title.cs" />
+    <Compile Include="Entities\Toolbox.cs" />
+    <Compile Include="Entities\ToolTip.cs" />
+    <Compile Include="Entities\TreeData.cs" />
+    <Compile Include="Entities\VisualItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T4\entity.cs" />
+    <Compile Include="T4\entity1.cs">
+      <DependentUpon>entity.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="T4\entity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>entity1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

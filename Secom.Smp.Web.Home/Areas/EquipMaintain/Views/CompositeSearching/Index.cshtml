@@ -1,0 +1,63 @@
+﻿@model Secom.Smp.ViewModel.Home.TestModel1
+    @{
+        Layout = "~/Views/Shared/_Page.cshtml";
+        ViewBag.PrintBtn = true;
+        ViewBag.Title = "工单详情";
+    }
+    <div class="page-content-body">
+        <div class="form-inline">
+            <div class="form-group">
+                <label class="control-label">工单号：</label>
+                @Html.TextBoxFor(m => m.TName, new { @class = "form-control input-inline", @placeholder = "搜索工单号" })
+                </div>         
+            <div class="form-group">
+                <label class="control-label">设备类型：</label>
+                @Html.DropDownList("equTypeList", ViewBag.equTypeList as IEnumerable<SelectListItem>, new { @class = "form-control" })
+                </div>
+            <div class="form-group">
+                <label class="control-label">计划时间：</label>
+                <div class="input-group input-medium date date-picker">
+                    @Html.TextBoxFor(m => m.TName1, new { @class = "form-control searchDateTime", @readonly = true })
+                    <span class="input-group-btn">
+                        <button class="btn default" type="button">
+                            <i class="fa fa-calendar"></i>
+                        </button>
+                    </span>
+                    <span class="input-group-addon"> 至 </span>
+                    @Html.TextBoxFor(m => m.TName2, new { @class = "form-control searchDateTime", @readonly = true })
+                    <span class="input-group-btn">
+                        <button class="btn default" type="button">
+                            <i class="fa fa-calendar"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" style="float:right;">
+                <button id="btnSearch" class="btn sbold yellow-casablanca" onclick="DataTablesObj.reloadList();">
+                    <i class="fa fa-search"></i>查询
+                </button>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                        <div class="portlet-body">
+                            <div class="table-toolbar">
+                                <div class="row"></div>
+                            </div>
+                        </div>
+                        <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_local"></table>
+                    </div>
+                    <!--弹窗-->
+                    <div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+                        <div class="modal-dialog divModal" role="document">
+                            <div class="modal-content">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END EXAMPLE TABLE PORTLET-->
+                </div>
+            </div>
+@section scripts
+{
+}

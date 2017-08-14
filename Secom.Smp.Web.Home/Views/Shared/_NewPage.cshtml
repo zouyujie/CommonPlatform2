@@ -1,0 +1,36 @@
+﻿@{
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/fileinput")
+    
+</head>
+<body>
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            @ViewBag.HeadString
+        </ul>
+        <ul class="page-breadcrumb" style="float:right;">
+            <li>
+                <i class='fa fa-reply'></i>
+                <a class='ajaxify nav-link' href='@ViewBag.ParentPageUrl'>返回</a>
+            </li>
+        </ul>
+    </div>
+    @Scripts.Render("~/bundles/bootstrap-fileinput")
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+    @Html.AutoLoadPageJs()
+    <script type="text/javascript">
+        $(function () {
+            $("#page_Home").on("click", function () {
+                $("#menu_Home").click();
+            })
+        })
+    </script>
+</body>
+</html>

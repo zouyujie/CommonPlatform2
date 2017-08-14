@@ -1,0 +1,54 @@
+﻿/*zouqj 2017-08-09 --首页样式*/
+  .container-fluid {
+    height: 50px;
+}
+.navbar-brand {
+    float: left;
+    font-size: 18px;
+    height: 50px;
+    line-height: 20px;
+    padding: 12px;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-right: 50px;
+    font-size: 16px;
+}
+.navbar {
+    margin-bottom: 0px;
+}
+.page-header-fixed .page-container {
+     margin-top: 118px; }
+ .page-content-wrapper .page-content{
+     margin-left:0px;
+ }
+ .panel-body{padding:0px;}
+#table_illumination tr > td{
+     vertical-align:middle;
+ }
+.table-scrollable thead > tr > th{text-align:center;}
+/*Index*/
+.panel-body .row {
+        display: none;
+}
+.portlet-body .totalPad{
+    margin:0 auto;text-align:center;
+}
+.portlet-body .totalPad .head{
+   margin:0 auto;font-size:15px;font-weight:bold;
+}
+.portlet-body .totalPad .done{
+    margin:0 auto;
+}
+.portlet-body .totalPad .noDone {
+    color:#94A0B2;margin:0 auto;
+}
+.portlet-body .totalPad .done.repair{color:orange;}
+.portlet-body .totalPad .done.visit{color:#3598dc;}
+.portlet-body .totalPad .done.maintain{color:#44b6ae;}
+.btn-sm, .btn-group-sm > .btn{
+    padding:2px 10px;
+    height:25px;
+}
+.btn-circle{
+    border-radius:2px;
+}

@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "EMS 365";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $("#menu_1").addClass("menuActive");
+        Layout.loadAjaxContent('/OverView');
+</script>
+}

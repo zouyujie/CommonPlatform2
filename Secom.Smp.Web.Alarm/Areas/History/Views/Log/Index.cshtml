@@ -1,0 +1,110 @@
+﻿@model List<Secom.Smp.Data.Models.OperatorLog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet light ">
+                <div class="portlet-title">
+                    <div class="caption font-dark">
+                        <i class="icon-settings font-dark"></i>
+                        <span class="caption-subject bold uppercase"> 日志列表</span>
+                    </div>
+                    <div class="actions">
+                        <div class="btn-group btn-group-devided" data-toggle="buttons">
+                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
+                                <input type="radio" name="options" class="toggle" id="option1">Actions
+                            </label>
+                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
+                                <input type="radio" name="options" class="toggle" id="option2">Settings
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="btn-group">
+                                    <button id="sample_editable_1_new" class="btn sbold green">
+                                        Add New
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="btn-group pull-right">
+                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">
+                                        Tools
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-print"></i> Print
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-pdf-o"></i> Save as PDF
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-excel-o"></i> Export to Excel
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                        <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+                                        <span></span>
+                                    </label>
+                                </th>
+                                <th> 名称 </th>
+                                <th> 操作者 </th>
+                                <th> 创建时间 </th>
+                                <th> 备注 </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null)
+                            {
+                                foreach (var v in Model)
+                                {
+                                    <tr class="odd gradeX">
+                                        <td>
+                                            <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                                <input type="checkbox" class="checkboxes" value="1" />
+                                                <span></span>
+                                            </label>
+                                        </td>
+                                        <td> @v.Name </td>
+                                        <td>
+                                           @v.CreateBy
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm label-success"> @v.CreateTime </span>
+                                        </td>
+                                        <td class="center"> @v.Msg</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>
+    </div>

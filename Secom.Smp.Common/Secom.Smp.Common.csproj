@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4A6D356-FFAF-4D7C-9BAE-DB32A6EB3F58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Secom.Smp.Common</RootNamespace>
+    <AssemblyName>Secom.Smp.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\packages\Aspose.Words\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\NPOI\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\packages\NPOI\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\packages\NPOI\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheHelper.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Configs\Configs.cs" />
+    <Compile Include="Configs\SystemConfig.cs" />
+    <Compile Include="EChartsUtil\ChartsData.cs" />
+    <Compile Include="EChartsUtil\ChartsUtil.cs" />
+    <Compile Include="Excel\Base\BaseGenerateSheet.cs" />
+    <Compile Include="Excel\Base\ColumnsMapping.cs" />
+    <Compile Include="Excel\Base\GenerateExcel.cs" />
+    <Compile Include="Excel\Base\GenerateSheet.cs" />
+    <Compile Include="Excel\Pages\UserListSheet.cs" />
+    <Compile Include="Extend\Ext_Datetime.cs" />
+    <Compile Include="Extend\Ext_String.cs" />
+    <Compile Include="File\FileHelper.cs" />
+    <Compile Include="Json\JsonTools.cs" />
+    <Compile Include="Log\Logger.cs" />
+    <Compile Include="SysLicence.cs" />
+    <Compile Include="Net\HttpMethods.cs" />
+    <Compile Include="Net\Net.cs" />
+    <Compile Include="Operator\OperatorModel.cs" />
+    <Compile Include="Operator\OperatorProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\DESEncrypt.cs" />
+    <Compile Include="Security\Md5.cs" />
+    <Compile Include="UIModel\DataTablesRequest.cs" />
+    <Compile Include="UIModel\jqDatatableResult.cs" />
+    <Compile Include="UIModel\jqDataTableParameter.cs" />
+    <Compile Include="UIModel\jstree.cs" />
+    <Compile Include="UIModel\uploadFile.cs" />
+    <Compile Include="VerifyCode.cs" />
+    <Compile Include="WebApiUtil\BaseService.cs" />
+    <Compile Include="WebApiUtil\FilterParam.cs" />
+    <Compile Include="WebApiUtil\ValidateModel.cs" />
+    <Compile Include="WebApiUtil\WebApiLicence.cs" />
+    <Compile Include="WebApiUtil\WebApiClient.cs" />
+    <Compile Include="Web\AjaxResult.cs" />
+    <Compile Include="Web\WebHelper.cs" />
+    <Compile Include="Word\WordHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extend\Ext_Convert.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Secom.Smp.Data\Secom.Smp.Data.csproj">
+      <Project>{06df430e-0990-4203-91f7-5642eed870a2}</Project>
+      <Name>Secom.Smp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Secom.Smp.ECharts\Secom.Smp.ECharts.csproj">
+      <Project>{5144c85d-2c9a-4b80-ba87-31a6724c4b5c}</Project>
+      <Name>Secom.Smp.ECharts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

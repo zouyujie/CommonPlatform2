@@ -1,0 +1,14 @@
+﻿<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="icon-home"></i>
+            <a class="nav-link" href="/Home">首页</a>
+            <i class="fa fa-angle-right"></i>
+            <a class="@ViewBag.IsAjaxify nav-link" href="@ViewBag.ParentPageUrl">@ViewBag.ParentTitle</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <span>@ViewBag.Title</span>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,1 @@
+D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.HttpClient.Admin\obj\Debug\Secom.Smp.HttpClient.Admin.csprojResolveAssemblyReference.cache

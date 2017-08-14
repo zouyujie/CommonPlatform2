@@ -1,0 +1,85 @@
+﻿@model List<Secom.Smp.Data.Models.OperatorLog>
+@{
+    ViewBag.Title = "日志列表";
+    ViewBag.ParentTitle = "历史记录";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+<div class="page-content-body">
+<div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="btn-group">
+                                @Html.TextBox("LogName", "", new { @class = "form-control input-inline input-medium", @placeholder = "日志名称" })
+                            </div>
+                            <button id="btnSearch" class="btn sbold green" onclick="DataTablesObj.reloadList();">
+                                查询
+                                <i class="fa fa-search"></i>
+                            </button>
+                            <button id="btnAdd" class="btn sbold green" onclick="DataTablesObj.doCreateModal('/History/Log/Create')" data-toggle="modal">添加</button>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">
+                                    Tools
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-print"></i> Print
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-file-pdf-o"></i> Save as PDF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-file-excel-o"></i> Export to Excel
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_local">
+                    @*<thead>
+                        <tr>
+                            <th class="text-center"></th>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">日志名称</th>
+                            <th class="text-center">日志备注</th>
+                            <th>创建时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>*@
+                </table>
+            </div>
+            <!--弹窗-->
+            <div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+                <div class="modal-dialog divModal" role="document">
+                    <div class="modal-content">
+                    </div>
+                </div>
+            </div>
+            <!--详情-->
+            <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+                <div class="modal-dialog divModal" role="document">
+                    <div class="modal-content">
+                    </div>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>
+</div>
+@section scripts
+{
+ <script src="@Html.ScriptsPath("lib/bootstrap-typeahead.js")"></script>
+}

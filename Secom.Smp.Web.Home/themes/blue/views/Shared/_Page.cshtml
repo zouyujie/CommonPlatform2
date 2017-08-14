@@ -1,0 +1,23 @@
+﻿@using Secom.Smp.Common
+@{
+    ViewBag.IsAjaxify= ViewBag.ParentPageUrl == null? "" : "ajaxify";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/fileinput")
+</head>
+<body>    
+@Html.Partial("Head")
+     @RenderBody()
+    @Scripts.Render("~/bundles/bootstrap-fileinput")
+    <script src="@Html.ScriptsPath("common/base-Datatable.js")"></script>
+    <script src="@Html.ScriptsPath("common/base-Datetimepicker.js")"></script>
+    <script src="@Html.ScriptsPath("common/base-validator.js")"></script>
+    <script src="@Html.ScriptsPath("common/base-Fileinput.js")"></script> 
+    @RenderSection("scripts", required: false)
+    @Html.AutoLoadPageJs()
+</body>
+</html>
