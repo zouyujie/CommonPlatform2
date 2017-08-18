@@ -80,3 +80,5 @@ D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.Web.Home\bin\Secom.Smp.ViewModel.d
 D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.Web.Home\bin\Secom.Smp.ViewModel.pdb
 D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.Web.Home\bin\Secom.Smp.Web.Base.dll
 D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.Web.Home\bin\Secom.Smp.Web.Base.pdb
+D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.Web.Home\bin\Secom.Smp.Web.Energy.dll
+D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.Web.Home\bin\Secom.Smp.Web.Energy.pdb

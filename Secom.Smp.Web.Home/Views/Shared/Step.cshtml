@@ -1,0 +1,56 @@
+﻿@model Secom.Smp.ViewModel.StepModel
+@{
+}
+@if (Model != null)
+{
+    if (Model.DataList != null && Model.DataList.Count > 0)
+    {
+        <div class="mt-element-step">
+            <div class="row step-line">
+                @{
+                    var length = Model.DataList.Count; //数据集合长度
+                    var percent = Math.Round(100m / length, 5); //每一个集合所占的百分比长度
+                    var className = string.Empty;
+                    var initClass = string.Empty;
+                    var fontClass = string.Empty;
+                    var number = string.Empty;
+                    var bgClass = string.Empty;
+                }
+                @for (var i = 0; i < length; i++)
+                {
+                    if (i == 0) //第一项
+                    {
+                        initClass = "first";
+                        number = (i + 1).ToString();
+                    }
+                    else if (i == length - 1) //最后一项
+                    {
+                        number = "<i class='fa fa-check'></i>";
+                        initClass = "last";
+                    }
+                    else
+                    {
+                        initClass = string.Empty;
+                        number = (i + 1).ToString();
+                    }
+                    if (i == Model.SelectIndex) //选中项
+                    {
+                        className = "done";
+                        fontClass = "light-blue";
+                        bgClass = "bg-light-blue";
+                    }
+                    else
+                    {
+                        className = string.Empty;
+                        fontClass = "dark";
+                        bgClass = "bg-white";
+                    }
+                    <div class="mt-step-col @initClass @className" style="width:@percent%">
+                        <div class="mt-step-number @bgClass"><span>@Html.Raw(number)</span></div>
+                        <div class="mt-step-title uppercase @fontClass">@Model.DataList[i]</div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}

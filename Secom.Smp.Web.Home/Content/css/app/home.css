@@ -22,29 +22,25 @@
      margin-left:0px;
  }
  .panel-body{padding:0px;}
-#table_illumination tr > td{
-     vertical-align:middle;
- }
-.table-scrollable thead > tr > th{text-align:center;}
 /*Index*/
 .panel-body .row {
         display: none;
 }
 .portlet-body .totalPad{
-    margin:0 auto;text-align:center;
+    margin:2px auto;text-align:center;width:100%
 }
 .portlet-body .totalPad .head{
-   margin:0 auto;font-size:15px;font-weight:bold;
+   margin:2px auto;font-size:15px;font-weight:bold;
 }
 .portlet-body .totalPad .done{
-    margin:0 auto;
+    margin:2px auto;
 }
 .portlet-body .totalPad .noDone {
     color:#94A0B2;margin:0 auto;
 }
-.portlet-body .totalPad .done.repair{color:orange;}
-.portlet-body .totalPad .done.visit{color:#3598dc;}
-.portlet-body .totalPad .done.maintain{color:#44b6ae;}
+.portlet-body .totalPad .done.repair{color:#FFB940;}
+.portlet-body .totalPad .done.visit{color:#6BA7F0;}
+.portlet-body .totalPad .done.maintain{color:#5ABE9C;}
 .btn-sm, .btn-group-sm > .btn{
     padding:2px 10px;
     height:25px;
@@ -52,3 +48,50 @@
 .btn-circle{
     border-radius:2px;
 }
+.navbar-default{
+    background-color:#F9F9F9;
+}
+.alarmInfo{
+    height:250px;
+}
+.alarmChart{
+    width:100%;height:250px;min-height:220px;min-width:220px;
+}
+.alarmInfo{min-width:200px; padding-top:6px;}
+.alarmInfo ul{
+    list-style:outside none none;padding-left:0px;
+}
+.alarmInfo ul i{
+    display:block;width:5px; height:40px; background-color:red;margin-bottom:-50px;
+}
+.alarmInfo ul li{
+    margin-top:15px;
+}
+.alarmInfo ul li ul{
+    margin-left:5px;
+}
+.alarmInfo ul li ul li span{
+    margin-right:15px;
+}
+.alarmInfo ul li ul li{margin:6px;}
+.maintainChart{width:100%;height:181px;}
+table.dataTable tbody tr{
+    text-align:center;
+}
+#table_transformer .odd,#table_coldChains .odd{
+    color:#6BA7F0;
+}
+#table_transformer .odd td:first-child,#table_coldChains .odd td:first-child{
+    color:black;
+}
+#publicLightingContainer > tr > td > span,#airConditionContainer > tr > td > span{
+    color:#6BA7F0;
+    margin-right:2px;
+}
+#publicLightingContainer > tr,#airConditionContainer > tr{
+    text-align:center;
+}
+#table_publicLighting tr > td{
+     vertical-align:middle;
+ }
+.table-scrollable thead > tr > th{text-align:center;}

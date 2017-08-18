@@ -309,11 +309,20 @@
     <Content Include="Content\js\lib\jstree\dist\themes\default\throbber.gif" />
     <Content Include="Content\js\lib\morris.js" />
     <Content Include="Content\js\lib\printThis.js" />
+    <Content Include="Content\js\lib\tmpl\jquery.tmpl.js" />
+    <Content Include="Content\js\lib\tmpl\jquery.tmpl.min.js" />
     <Content Include="Content\js\views\areas\admin\default\create.js" />
     <Content Include="Content\js\views\areas\admin\default\update.js" />
     <Content Include="Content\js\views\areas\admin\ECharts\Bar.js" />
     <Content Include="Content\js\views\areas\admin\ECharts\index.js" />
     <Content Include="Content\js\views\areas\admin\ECharts\Line.js" />
+    <Content Include="Content\js\views\areas\BaseInfo\area.js" />
+    <Content Include="Content\js\views\areas\BaseInfo\branch.js" />
+    <Content Include="Content\js\views\areas\BaseInfo\build.js" />
+    <Content Include="Content\js\views\areas\BaseInfo\collectorcmd.js" />
+    <Content Include="Content\js\views\areas\BaseInfo\collector.js" />
+    <Content Include="Content\js\views\areas\BaseInfo\item.js" />
+    <Content Include="Content\js\views\areas\BaseInfo\units.js" />
     <Content Include="Content\js\views\areas\EquipMaintain\CompositeSearching\index.js" />
     <Content Include="Content\js\views\areas\EquipMaintain\CompositeSearching\read.js" />
     <Content Include="Content\js\views\areas\EquipMaintain\MaintainStandard\index.js" />
@@ -424,6 +433,45 @@
     <Content Include="Areas\EquipMaintain\Views\MaintainStandard\Create.cshtml" />
     <Content Include="Areas\EquipMaintain\Views\CompositeSearching\Index.cshtml" />
     <Content Include="Areas\EquipMaintain\Views\CompositeSearching\Read.cshtml" />
+    <Content Include="Areas\Energy\Views\web.config" />
+    <Content Include="Areas\Energy\Views\ElectricBranch\Charts.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricBranch\Index.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricBranch\Overview.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricBranch\Search.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricItem\Charts.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricItem\Index.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricItem\Overview.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricItem\Search.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricUnit\Charts.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricUnit\Index.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricUnit\Overview.cshtml" />
+    <Content Include="Areas\Energy\Views\ElectricUnit\Search.cshtml" />
+    <Content Include="Areas\Energy\Views\Gas\Index.cshtml" />
+    <Content Include="Areas\Energy\Views\Report\Index.cshtml" />
+    <Content Include="Areas\Energy\Views\Water\Index.cshtml" />
+    <Content Include="Areas\Energy\Views\Shared\_Form.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\web.config" />
+    <Content Include="Areas\BaseInfo\Views\Area\Create.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Area\Index.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Area\Update.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Branch\Create.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Branch\Index.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Branch\Update.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Build\Create.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Build\Index.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Build\Update.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\CollectorCMD\Create.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\CollectorCMD\Index.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\CollectorCMD\Update.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Collector\Create.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Collector\Index.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Collector\Update.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Item\Create.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Item\Index.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Item\Update.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Units\Create.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Units\Index.cshtml" />
+    <Content Include="Areas\BaseInfo\Views\Units\Update.cshtml" />
     <None Include="Properties\PublishProfiles\mvc.pubxml" />
     <None Include="Properties\PublishProfiles\smp.pubxml" />
     <Content Include="Content\css\app\login.css" />
@@ -497,11 +545,15 @@
     <Content Include="Views\OverView\Index.cshtml" />
     <Content Include="Views\AreaView\Index.cshtml" />
     <Content Include="Views\Building\Index.cshtml" />
+    <Content Include="Views\Shared\Step.cshtml" />
+    <Content Include="Views\Shared\_Layout - 复制.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\BaseInfo\Views\Shared\" />
     <Folder Include="Areas\EquipRepair\Views\Shared\" />
+    <Folder Include="Content\js\views\areas\Energy\" />
     <Folder Include="Content\js\views\Home\" />
     <Folder Include="Excel\" />
     <Folder Include="LogFile\" />
@@ -530,6 +582,10 @@
     <ProjectReference Include="..\Secom.Smp.Web.Base\Secom.Smp.Web.Base.csproj">
       <Project>{c39b7c1d-4d5c-42d3-bd6a-ef5630bf07bd}</Project>
       <Name>Secom.Smp.Web.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Secom.Smp.Web.Energy\Secom.Smp.Web.Energy.csproj">
+      <Project>{01b37d90-c126-4e9d-b445-1746e8caf14b}</Project>
+      <Name>Secom.Smp.Web.Energy</Name>
     </ProjectReference>
     <ProjectReference Include="..\Secom.Smp.Web.Home.Client\Secom.Smp.Web.Home.Client.csproj">
       <Project>{527e03b4-34d3-420f-89e5-d7fc82778a35}</Project>

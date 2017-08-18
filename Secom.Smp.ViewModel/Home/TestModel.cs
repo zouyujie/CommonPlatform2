@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Secom.Smp.ViewModel.Home
+﻿namespace Secom.Smp.ViewModel.Home
 {
-   public class TestModel
+    public class TestModel
     {
         public string Name0 { get; set; }
         public string Name1 { get; set; }
         public string Name2 { get; set; }
         public string Name3 { get; set; }
         public string Name4 { get; set; }
+        public string Name5 { get; set; }
+        public string Name6 { get; set; }
+        public string Name7 { get; set; }
+        public string Name8 { get; set; }
+        public string Name9 { get; set; }
+        public string Name10{ get; set; }
+        public int Value { get; set; }
     }
     public class TestModel1
     {
@@ -28,6 +29,11 @@ namespace Secom.Smp.ViewModel.Home
         public string TName7 { get; set; }
         public string TName8 { get; set; }
         public string TName9 { get; set; }
+        public string TName10{ get; set; }
+        public string TName11 { get; set; }
+        public string TName12 { get; set; }
+        public string TName13 { get; set; }
+        public string TName14 { get; set; }
     }
     public class TestModel2
     {

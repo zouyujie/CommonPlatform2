@@ -11,7 +11,8 @@ namespace Secom.Smp.Web.Home
             //1.CORE PLUGINS
             bundles.Add(new ScriptBundle("~/bundles/core").Include(
                       "~/Content/js/jquery.min.js",
-                      "~/Content/js/lib/bootstrap.js"
+                      "~/Content/js/lib/bootstrap.js", 
+                      "~/Content/js/lib/tmpl/jquery.tmpl.js"
                       ));
             //2.layouts
             bundles.Add(new ScriptBundle("~/bundles/layouts").Include(
@@ -29,7 +30,7 @@ namespace Secom.Smp.Web.Home
           "~/Content/js/lib/bootstrap-toastr/toastr.js", //提示框
           "~/Content/js/lib/bootstrapValidator/bootstrapValidator.js", //表单验证
           "~/Content/js/common/base-validator.js",
-          "~/Content/js/lib/bootstrap-confirmation/bootstrap-confirmation.js" //确认提示
+          "~/Content/js/lib/bootstrap-confirmation/bootstrap-confirmation.js"//确认提示
           ));
 
             #endregion

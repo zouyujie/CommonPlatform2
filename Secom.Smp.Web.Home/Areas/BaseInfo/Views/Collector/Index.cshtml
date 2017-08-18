@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "采集器列表";
+    ViewBag.ParentTitle = "系统管理";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+
+<style type="text/css">
+    .divModal {
+        width: 1000px;
+    }
+</style>
+<div class="page-content-body">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet-title">
+                <div class="caption font-dark">
+                    <i class="icon-settings font-dark"></i>
+                    <span class="caption-subject bold uppercase">采集器列表</span>
+                </div>
+                <div class="actions">
+
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="btn-group">
+                                <button id="btnAdd" class="btn sbold green" onclick="DataTablesObj.doCreateModal('/Admin/BaseInfo/CollectorCreate')" data-toggle="modal">添加采集器<i class="fa fa-plus"></i></button>
+                                <button id="btnDeleteList" title="确定要删除吗?" class="btn sbold btn-danger deleteBtn" data-toggle="confirmation" data-placement="right" data-btn-ok-label="继续" data-btn-ok-icon="icon-like" data-btn-ok-class="btn-success" data-btn-cancel-label="取消"
+                                        data-btn-cancel-icon="icon-close" data-btn-cancel-class="btn-danger">
+                                    批量删除
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">
+                                    操作
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="/Admin/Default/ExportExcel" target='_blank' class="fa fa-file-excel-o"><span style="margin-left:10px;"> 导出Excel </span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-file-excel-o" id="printView"><span style="margin-left:10px;"> 打印预览</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_local"></table>
+            </div>
+            <!--模态弹窗-->
+            <div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+                <div class="modal-dialog divModal" role="document">
+                    <div class="modal-content">
+                    </div>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script src="@Html.ScriptsPath("lib/printThis.js")"></script>
+}
+
+
+
+

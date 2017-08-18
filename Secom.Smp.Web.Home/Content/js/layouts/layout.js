@@ -265,7 +265,7 @@ var Layout = function () {
 
             var url = $(this).attr("href");
 
-            App.startPageLoading();
+            //App.startPageLoading();
 
             if (App.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
                 $('.page-header .responsive-toggler').click();

@@ -25,165 +25,57 @@
 <!-- END HEAD -->
 <body class="page-boxed page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo ng-scope" style="overflow-x:hidden;">
     <!-- BEGIN HEADER -->
-    <div class="page-header navbar navbar-fixed-top">
-        <!-- BEGIN HEADER INNER -->
-        <div class="page-header-inner">
-            <div style="float:left;margin-left:10px;">
-                <div class="menu-toggler sidebar-toggler">
-                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="page-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="topLogo">
+                    <a href="/Home/Index">
+                        <img src="~/Content/img/home/Logo48.png" alt="logo" class="logo-default" style="margin-top:8px;" title="智慧机电设备运维综合管理平台" />
+                    </a>
+                </div>
+                <div class="page-actions" style="float:left;">
+                    <h1 class="head-title">XX医院监控平台</h1>
                 </div>
             </div>
-            <!-- BEGIN LOGO -->
-            <div class="topLogo">
-                <a href="/Home/Index">
-                    <img src="~/Content/img/home/Logo48.png" alt="logo" class="logo-default" style="margin-top:8px;" title="智慧机电设备运维综合管理平台" />
-                </a>
-            </div>
-            <!-- END LOGO -->
-            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"></a>
-            <!-- END RESPONSIVE MENU TOGGLER -->
-            <!-- BEGIN PAGE ACTIONS -->
-            <!-- DOC: Remove "hide" class to enable the page header actions -->
-            <div class="page-actions">
-                <h1 class="page-title">XX医院监控平台</h1>
-            </div>
-            <!-- END PAGE ACTIONS -->
-            <!-- BEGIN MEGA MENU -->
-            <!-- DOC: Remove "hor-menu-light" class to have a horizontal menu with theme background instead of white background -->
-            <!-- DOC: This is desktop version of the horizontal menu. The mobile version is defined(duplicated) in the responsive menu below along with sidebar menu. So the horizontal menu has 2 seperate versions -->
-            <!-- END MEGA MENU -->
-            <!-- BEGIN PAGE TOP -->
-            <div class="page-top">
-                <!-- BEGIN HEADER SEARCH BOX -->
-                <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
-                @*<form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search..." name="query">
-                            <span class="input-group-btn">
-                                <a href="javascript:;" class="btn submit">
-                                    <i class="icon-magnifier"></i>
+            <div class="top-menu hidden-ms hidden-xs" style="float:right;">
+                <ul class="nav navbar-nav pull-right">
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <li class="dropdown dropdown-user">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <img alt="" class="img-circle" src="~/Content/img/home/Logo32.png" />
+                            <span class="username username-hide-on-mobile"> @ViewBag.UserName </span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-user"></i> 我的个人信息
                                 </a>
-                            </span>
-                        </div>
-                    </form>*@
-                <!-- END HEADER SEARCH BOX -->
-                <!-- BEGIN TOP NAVIGATION MENU -->
-                <div class="top-menu hidden-ms hidden-xs" style="float:right;">
-                    <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
-                    <div class="collapse navbar-collapse navbar-responsive-collapse">
-                        @Html.Partial("TopMenu", ViewData["TopMenu"])
-                        <ul class="nav navbar-nav pull-right">
-                            <!-- BEGIN NOTIFICATION DROPDOWN -->
-                            <!-- DOC: Apply "dropdown-dark" class below "dropdown-extended" to change the dropdown styte -->
-                            <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
-                            <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class -->
-                            <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
-                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <i class="icon-bell"></i>
-                                    <span class="badge badge-default"> 2 </span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="external">
-                                        <h3>
-                                            <span class="bold">2条</span> 通知
-                                        </h3>
-                                        <a href="#">查看全部</a>
-                                    </li>
-                                    <li>
-                                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
-                                            <li>
-                                                <a href="javascript:;">
-                                                    <span class="time">现在</span>
-                                                    <span class="details">
-                                                        <span class="label label-sm label-icon label-success">
-                                                            <i class="fa fa-plus"></i>
-                                                        </span> 空调坏了
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">
-                                                    <span class="time">9 天前</span>
-                                                    <span class="details">
-                                                        <span class="label label-sm label-icon label-danger">
-                                                            <i class="fa fa-bolt"></i>
-                                                        </span> 空调没有关闭
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
                             </li>
-                            <!-- END NOTIFICATION DROPDOWN -->
-                            <!-- BEGIN INBOX DROPDOWN -->
-                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                            <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
-                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <i class="icon-envelope-open"></i>
-                                    <span class="badge badge-default"> 1 </span>
+                            <li>
+                                <a href="/Home/OutLogin">
+                                    <i class="icon-key"></i> 退出登录
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li class="external">
-                                        <h3>
-                                            你有
-                                            <span class="bold">1</span> 条消息
-                                        </h3>
-                                        <a href="#">查看全部</a>
-                                    </li>
-                                    <li>
-                                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
-                                            <li>
-                                                <a href="#">
-                                                    <span class="photo">
-                                                        <img src="~/Content/img/home/Logo32.png" class="img-circle" alt="">
-                                                    </span>
-                                                    <span class="subject">
-                                                        <span class="from">邓工 </span>
-                                                        <span class="time">现在 </span>
-                                                    </span>
-                                                    <span class="message"> 华润那边的一个空调有问题，要派人过来维修 </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- BEGIN USER LOGIN DROPDOWN -->
-                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                            <li class="dropdown dropdown-user">
-                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <img alt="" class="img-circle" src="~/Content/img/home/Logo32.png" />
-                                    <span class="username username-hide-on-mobile"> @ViewBag.UserName </span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-default">
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-user"></i> 我的个人信息
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/Home/OutLogin">
-                                            <i class="icon-key"></i> 退出登录
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- END USER LOGIN DROPDOWN -->
-                            <li class="dropdown dropdown-extended quick-sidebar-toggler">
-                                <span class="sr-only">快速菜单</span>
-                                <i class="icon-logout"></i>
                             </li>
                         </ul>
-                    </div>
-                </div>
-                <!-- END TOP NAVIGATION MENU -->
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                    <li class="dropdown dropdown-extended quick-sidebar-toggler">
+                        <span class="sr-only">快速菜单</span>
+                        <i class="icon-logout"></i>
+                    </li>
+                </ul>
             </div>
-            <!-- END PAGE TOP -->
+            <div class="navbar-collapse collapse">
+                @Html.Partial("TopMenu", ViewData["TopMenu"])
+            </div>
         </div>
-        <!-- END HEADER INNER -->
     </div>
     <!-- END HEADER -->
     <!-- BEGIN HEADER & CONTENT DIVIDER -->

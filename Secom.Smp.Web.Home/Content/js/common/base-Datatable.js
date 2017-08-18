@@ -116,7 +116,7 @@ var DataTablesObj = (function () {
         var isChecked = $("#" + DataTablesObj.chkAllColl)[0].checked;
         $("input[name='chkItem']").prop("checked", isChecked);
     };
-    //查询刷新
+    //查询刷新([datatable ID])
     this.reloadList = function (id) {
         var tableId = id == undefined ? DataTablesObj.table_local : id;
         var tables = $('#' + tableId).dataTable().api();//获取DataTables的Api，详见 http://www.datatables.net/reference/api/
@@ -133,16 +133,18 @@ var DataTablesObj = (function () {
         }
     };
     //详细记录（主键ID，[modal ID],[异步请求界面url]）
-    this.doReadModal = function (id, modalId) {
+    this.doReadModal = function (id, modalId, readUrl) {
         var modalId = modalId == undefined ? DataTablesObj.modalId : modalId;
-        $('#' + DataTablesObj.modalId).modal({ show: true, backdrop: 'static', remote: DataTablesObj.readUrl + "?id=" + id });
+        var url = readUrl == undefined ? DataTablesObj.readUrl : readUrl;
+        $('#' + DataTablesObj.modalId).modal({ show: true, backdrop: 'static', remote:url  + "?id=" + id });
     }
-    //编辑记录（主键ID，异步请求界面url,[modal ID]）
-    this.doUpdateModal = function (id,updateUrl, modalId) {
+    //编辑记录（主键ID，[异步请求界面url],[modal ID]）
+    this.doUpdateModal = function (id, modalId,updateUrl) {
         var modalId = modalId == undefined ? DataTablesObj.modalId : modalId;
-        $('#' + modalId).modal({ show: true, backdrop: 'static', remote: DataTablesObj.updateUrl + "?id=" + id });
+        var url = updateUrl == undefined ? DataTablesObj.updateUrl : updateUrl;
+        $('#' + modalId).modal({ show: true, backdrop: 'static', remote: url + "?id=" + id });
     };
-    //删除选中记录（批量删除）
+    //删除选中记录（批量删除url地址）
     this.doDeleteList = function (url) {
         var table = $('#' + DataTablesObj.table_local).dataTable();
         var nTrs = table.fnGetNodes();//fnGetNodes获取表格所有行，nTrs[i]表示第i行tr对象
@@ -173,7 +175,7 @@ var DataTablesObj = (function () {
             }
         });
     }
-    //删除单条记录
+    //删除单条记录（控件id，主键id）
     this.doDelete = function (btn, id) {
         $(btn).on('confirmed.bs.confirmation', function () {
             $.post(DataTablesObj.deleteUrl, { Id: id }, function (result) {
@@ -224,7 +226,7 @@ var DataTablesObj = (function () {
         },
         pagingType: "bootstrap_full_number"//分页样式的类型 "full_numbers"//
     };
-    //监听批量删除按钮事件
+    //监听批量删除按钮事件（控件ID，url删除地址）
     this.listenerDeleteEvent = function (ctrlId, url) {
         $('#' + ctrlId).on('confirmed.bs.confirmation', function () {
             DataTablesObj.doDeleteList(url);
@@ -232,7 +234,7 @@ var DataTablesObj = (function () {
             $('#' + ctrlId).confirmation('show');
         });
     }
-    //控件初始化（[table容器ID]）
+    //控件初始化（配置项，[table容器ID]，[删除对象]）
     this.init = function (options, tableId,obj) {
         var tableId = tableId == undefined ? DataTablesObj.table_local : tableId;
         var opts = options == undefined ? DataTablesObj.options : options;
@@ -242,7 +244,16 @@ var DataTablesObj = (function () {
         } else {
             obj.listenerDeleteEvent(obj.batchDeleteBtn, obj.batchDeleteUrl);
         }      
-        delete options.aoColumns;
+        delete options.aoColumns;//同一个页面多处使用时，要先删除此对象，具体原因不明
     };
+    //批量初始化(options配置数组,tables id数组)-不添加监听事件
+    this.initList = function (opts, ids) {
+        if (opts!=undefined &&opts!=null &&opts.length>0&& ids != undefined&& ids!=null && ids.length > 0) {
+            var length = ids.length;
+            for (var i = 0; i < length; i++) {
+                $('#' + ids[i]).dataTable(opts[i]);
+            }
+        }
+    }
     return this;
 }).call({});

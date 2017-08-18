@@ -5,7 +5,7 @@ using Secom.Smp.Web.Home.Controllers;
 namespace Secom.Smp.Web.Home.Controllers
 {
     [TestClass]
-    public class HomeControllerTest
+    public class HomeControllerTest:Controller
     {
         [TestMethod]
         public void Index()
@@ -18,6 +18,11 @@ namespace Secom.Smp.Web.Home.Controllers
 
             //// Assert
             //Assert.IsNotNull(result);
+        }
+        public JsonResult GetAlarmTotalInfo(string type)
+        {
+            OverViewController controller = new OverViewController();
+            return controller.GetAlarmTotalInfo(type);
         }
     }
 }

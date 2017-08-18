@@ -62,7 +62,7 @@ namespace Secom.Smp.Web.Base.Controllers
         {
             ViewBag.HeadString = HeadString;
             ViewBag.MenuId = MenuId;
-            ViewBag.SubHeadString =  new MvcHtmlString(string.Format("<i class='fa fa-angle-right'></i>{0}",title)); 
+            ViewBag.SubHeadString = title; 
         }
         #endregion
         [HttpGet]

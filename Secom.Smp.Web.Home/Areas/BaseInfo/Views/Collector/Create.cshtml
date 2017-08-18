@@ -1,0 +1,177 @@
+﻿@{
+    ViewBag.Title = "采集器列表";
+    ViewBag.ParentTitle = "系统管理";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+
+<div class="tab-pane" id="tab_2">
+    <div class="portlet box green">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift"></i>添加修改信息
+            </div>
+            <div class="tools">
+                <a href="javascript:;" class="collapse"> </a>
+                <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                <a href="javascript:;" class="reload"> </a>
+                <a href="javascript:;" class="remove"> </a>
+            </div>
+        </div>
+
+        <div class="portlet-body form">
+            <!-- BEGIN FORM-->
+            <form action="#" class="form-horizontal">
+                <div class="form-body">
+                    <h3 class="form-section">采集器</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">采集器编号</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="440300B05901#">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">采集器名称</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">所属单位</label>
+                                <div class="col-md-9">
+                                    <select class="form-control">
+                                        <option value="">请选择</option>
+                                        <option value="">A单位</option>
+                                        <option value="">B单位</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">所属建筑</label>
+                                <div class="col-md-9">
+                                    <select class="form-control">
+                                        <option value="">请选择</option>
+                                        <option value="">腾讯大厦</option>
+                                        <option value="">百度大厦</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">IP地址</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="192.168.1.2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">最近在线时间</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="yyyy-MM-dd">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">是否启用</label>
+                                <div class="col-md-9">
+                                    <div class="radio-list">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadios1" value="option1" checked />正常
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadios1" value="option2" />停用
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">是否上线</label>
+                                <div class="col-md-9">
+                                    <div class="radio-list">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadios2" value="option1" /> 是
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadios2" value="option2" checked /> 否
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="form-section">操作信息</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">创建人</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="Nick">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">创建时间</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="2017-08-09">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">修改人</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="Nick">
+                                </div>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">修改时间</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="2017-08-09">
+                                </div>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button type="submit" class="btn green">保存</button>
+                                    <button type="button" class="btn default">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6"> </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

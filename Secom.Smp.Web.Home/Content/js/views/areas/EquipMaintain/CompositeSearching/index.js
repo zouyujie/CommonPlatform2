@@ -5,7 +5,7 @@
     obj.showUpdateBtn = false;//显示更新按钮
     obj.showDeleteBtn = false; //显示删除按钮
 
-    var options = obj.options;
+    var options =clone(obj.options);
 
     options.columns = [{ title: "", "visible": false, "data": "ID" },
            obj.checboxFied,
@@ -23,7 +23,7 @@
            {
                "data": "ID", orderable: false, title: "操作", "render": function (data, type, row, meta) { //自定义列
                    var re = "<div class='operatorDiv'></i>";
-                   re += "<a class='ajaxify nav-link ' type='button' data-toggle='dropdown' aria-expanded='false' href=\"/EquipMaintain/CompositeSearching/Read?Id=" + data + "&&MenuId=" + $("#hidfMenuId").val() + "\">详情</a>";
+                   re += "<a class='ajaxify nav-link' type='button' data-toggle='dropdown' aria-expanded='false' href=\"/EquipMaintain/CompositeSearching/Read?Id=" + data + "&&MenuId=" + $("#hidfMenuId").val() + "\">详情</a>";
                    re += "</div>";
                    return re;
                }

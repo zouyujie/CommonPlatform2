@@ -1,0 +1,162 @@
+﻿@{
+    ViewBag.Title = "分项列表";
+    ViewBag.ParentTitle = "系统管理";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+
+@*<div class="portlet box blue">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-gift"></i>添加信息
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse"> </a>
+            <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+            <a href="javascript:;" class="reload"> </a>
+            <a href="javascript:;" class="remove"> </a>
+        </div>
+    </div>*@
+
+<div class="portlet-body form">
+    <!-- BEGIN FORM-->
+    <form action="#" class="horizontal-form">
+        <div class="form-body">
+            <h3 class="form-section">分项信息</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">分项编号</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="10001">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">分项名称</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="照明用电">
+                        <span class="help-block">请输入分项名称</span>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">所属单位</label>
+                        <select class="form-control">
+                            <option value="">A单位</option>
+                            <option value="">B单位</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">所属建筑</label>
+                        <select class="form-control">
+                            <option value="">A大厦</option>
+                            <option value="">B大厦</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">所属分项</label>
+                        <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
+                            <option value="Category 1">电</option>
+                            <option value="Category 2">水</option>
+                            <option value="Category 3">气</option>
+                            <option value="Category 4">成本</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">能耗类型</label>
+                        <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
+                            <option value="Category 1">电</option>
+                            <option value="Category 2">水</option>
+                            <option value="Category 3">气</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">能耗单位</label>
+                        <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
+                            <option value="Category 1">千瓦/时</option>
+                            <option value="Category 2">每立方</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">是否启用</label>
+                        <div class="radio-list">
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="opation1" checked> 启用
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="op3tion2"> 停用
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="control-label">分项表达式</label>
+                        <textarea></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="form-section">操作信息</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>创建人</label>
+                        <input type="text" class="form-control" placeholder="Nick">
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>创建时间</label>
+                        <input type="text" class="form-control" placeholder="2017-08-08">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>修改人</label>
+                        <input type="text" class="form-control" placeholder="Nick">
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>修改时间</label>
+                        <input type="text" class="form-control" placeholder="2017-08-08">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+        </div>
+        <div class="form-actions right">
+            <button type="button" class="btn default">取消</button>
+            <button type="submit" class="btn blue">
+                <i class="fa fa-check"></i> 保存
+            </button>
+        </div>
+    </form>
+    <!-- END FORM-->
+</div>
+
+@*</div>*@

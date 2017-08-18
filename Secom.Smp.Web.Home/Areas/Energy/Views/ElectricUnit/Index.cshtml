@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+
+@*<style type="text/css">
+        #divTabContent .row {
+            display: none;
+        }
+
+        #table_WorkloadTotal, #table_WorkloadTotal thead th {
+            text-align: center;
+        }
+    </style>*@
+<div class="page-content-body">
+    <div class="tabbable-custom">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#" id="workloadTotal" data-toggle="tab" aria-expanded="false" onclick="Layout.loadAjaxContent('/Energy/ElectricUnit/Overview', 'divTabContent')">分户概览</a>
+            </li>
+            <li class="">
+                <a href="#" data-toggle="tab" aria-expanded="false" onclick="Layout.loadAjaxContent('/Energy/ElectricUnit/Search', 'divTabContent')">分户查询</a>
+            </li>
+            <li>
+                <a href="#" data-toggle="tab" aria-expanded="false" onclick="Layout.loadAjaxContent('/Energy/ElectricUnit/Charts', 'divTabContent')">热力图</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="divTabContent">
+                @{ Html.RenderAction("Overview");}
+            </div>
+        </div>
+    </div>
+</div>
+

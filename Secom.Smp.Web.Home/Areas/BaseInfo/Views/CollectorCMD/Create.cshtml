@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "采集命令";
+    ViewBag.ParentTitle = "系统管理";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+
+<div class="portlet-body form">
+    <!-- BEGIN FORM-->
+    <form action="#" class="horizontal-form">
+        <div class="form-body">
+            <h3 class="form-section">采集器命令</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">命令编号</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="CCMD001">
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">命令名称</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="采集器命令">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">设备类型</label>
+                        <select class="form-control">
+                            <option value="">A类型</option>
+                            <option value="">B类型</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">描述信息</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="描述信息">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">是否启用</label>
+                        <div class="radio-list">
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="opation1" checked> 启用
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="op3tion2"> 停用
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">是否参数</label>
+                        <div class="radio-list">
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 是
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 否
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">是否采集读数命令</label>
+                        <div class="radio-list">
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 是
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 否
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="form-section">操作信息</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>创建人</label>
+                        <input type="text" class="form-control" placeholder="Nick">
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>创建时间</label>
+                        <input type="text" class="form-control" placeholder="2017-08-08">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>修改人</label>
+                        <input type="text" class="form-control" placeholder="Nick">
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>修改时间</label>
+                        <input type="text" class="form-control" placeholder="2017-08-08">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+        </div>
+        <div class="form-actions right">
+            <button type="button" class="btn default">取消</button>
+            <button type="submit" class="btn blue">
+                <i class="fa fa-check"></i> 保存
+            </button>
+        </div>
+    </form>
+    <!-- END FORM-->
+</div>

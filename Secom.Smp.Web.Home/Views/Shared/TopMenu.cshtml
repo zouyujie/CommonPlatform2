@@ -4,7 +4,7 @@
 {
     var index = 0;
     var url = "";
-    <ul class="nav navbar-nav pull-left" id="ulTopMenu">
+    <ul class="nav navbar-nav" id="ulTopMenu">
         <!-- DOC: Remove data-hover="megamenu-dropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->
         <!-- onclick="Layout.loadAjaxContent('/Home/Default',undefined,undefined,false,@index)"-->
         @foreach (Menu menu in Model)
@@ -13,7 +13,7 @@
             url = index == 1 ? "/Home" : menu.LinkUrl + "/" + menu.Id;
             if (index == 1)
             {
-                <li class="dropdown">
+                <li>
                     <a href="@url" onclick="App.startPageLoading({ animate: true });" id="menu_@menu.Id" style="padding-right:10px;" class="nav-link dropdown-toggle">
                         <span> @menu.Text </span>
                     </a>
@@ -21,7 +21,7 @@
             }
             else
             {
-            <li class="dropdown">
+            <li>
                 <a href="@url"  id="menu_@menu.Id" style="padding-right:10px;" class="nav-link dropdown-toggle">
                     <span> @menu.Text </span>
                 </a>

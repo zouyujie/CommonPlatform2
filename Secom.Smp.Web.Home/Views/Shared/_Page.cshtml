@@ -11,7 +11,11 @@
     <div class="page-bar">
         <ul class="page-breadcrumb">
             @ViewBag.HeadString
-            @ViewBag.SubHeadString
+            @if (ViewBag.SubHeadString != null)
+            {
+            <i class='fa fa-angle-right'></i>
+            <span>@ViewBag.SubHeadString</span>
+            }
         </ul>
         <div class="form-group" style="float:right;margin:4px 0px 0px 0px">
             @if (ViewBag.AddBtn == true)

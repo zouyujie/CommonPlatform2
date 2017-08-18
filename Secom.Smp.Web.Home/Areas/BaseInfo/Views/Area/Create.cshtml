@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "AreaCreate";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+
+<div class="portlet box blue">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-gift"></i>添加信息
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse"> </a>
+            <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+            <a href="javascript:;" class="reload"> </a>
+            <a href="javascript:;" class="remove"> </a>
+        </div>
+    </div>
+
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form action="#" class="horizontal-form">
+            <div class="form-body">
+                <h3 class="form-section">区域信息</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">区域编号</label>
+                            <input type="text" id="firstName" class="form-control" placeholder="Chee Kin">
+                            <span class="help-block"> This is inline help </span>
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group has-error">
+                            <label class="control-label">区域名称</label>
+                            <input type="text" id="lastName" class="form-control" placeholder="Lim">
+                            <span class="help-block"> This field has error. </span>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">所属区域</label>
+                            <select class="form-control">
+                                <option value="">全国</option>
+                                <option value="">广东</option>
+                            </select>
+                            <span class="help-block"> Select your Area </span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="form-section">操作信息</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>创建人</label>
+                            <input type="text" class="form-control" placeholder="Nick">
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>创建时间</label>
+                            <input type="text" class="form-control" placeholder="2017-08-08">
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>修改人</label>
+                            <input type="text" class="form-control" placeholder="Nick">
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>修改时间</label>
+                            <input type="text" class="form-control" placeholder="2017-08-08">
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+            </div>
+            <div class="form-actions right">
+                <button type="button" class="btn default">取消</button>
+                <button type="submit" class="btn blue">
+                    <i class="fa fa-check"></i> 保存
+                </button>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+
+</div>

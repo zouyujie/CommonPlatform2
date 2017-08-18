@@ -7091,7 +7091,7 @@ Portlets
 /* Basic portlet */
 .portlet {
   margin-top: 0px;
-  margin-bottom: 25px;
+  margin-bottom: 15px; /*25px*/
   padding: 0px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -7310,7 +7310,7 @@ Portlets
 .portlet.solid.bordered > .portlet-title {
   margin-bottom: 10px; }
 
-/* Box portlet */
+/* Box portlet modify by zouqj*/
 .portlet.box {
   padding: 0px !important; }
   .portlet.box > .portlet-title {
@@ -7321,17 +7321,17 @@ Portlets
     .portlet.box > .portlet-title > .caption {
       padding: 11px 0 9px 0; }
     .portlet.box > .portlet-title > .tools > a.remove {
-      background-image: url(../img/portlet-remove-icon-white.png); }
+      background-image: url(../img/portlet-remove-icon.png); }
     .portlet.box > .portlet-title > .tools > a.config {
-      background-image: url(../img/portlet-config-icon-white.png); }
+      background-image: url(../img/portlet-config-icon.png); }
     .portlet.box > .portlet-title > .tools > a.reload {
-      background-image: url(../img/portlet-reload-icon-white.png); }
+      background-image: url(../img/portlet-reload-icon.png); }
     .portlet.box > .portlet-title > .tools > a.expand {
-      background-image: url(../img/portlet-expand-icon-white.png); }
+      background-image: url(../img/portlet-expand-icon.png); }
     .portlet.box > .portlet-title > .tools > a.collapse {
-      background-image: url(../img/portlet-collapse-icon-white.png); }
+      background-image: url(../img/portlet-collapse-icon.png); }
     .portlet.box > .portlet-title > .tools > a.fullscreen {
-      color: #fdfdfd; }
+      color: #ADADAD; }/*#fdfdfd*/
     .portlet.box > .portlet-title > .actions {
       padding: 7px 0 5px 0; }
   .portlet.box > .portlet-body {
@@ -8767,7 +8767,7 @@ Custom colored portlets
 
 .portlet > .portlet-body.grey-cararra,
 .portlet.grey-cararra {
-  background-color: #fafafa; }
+  background-color: #F9F9F9; }
 
 .portlet.solid.grey-cararra > .portlet-title,
 .portlet.solid.grey-cararra > .portlet-body {
@@ -8801,7 +8801,7 @@ Custom colored portlets
   border: 1px solid white;
   border-top: 0; }
   .portlet.box.grey-cararra > .portlet-title {
-    background-color: #fafafa; }
+    background-color: #F9F9F9; }
     .portlet.box.grey-cararra > .portlet-title > .caption {
       color: #333333; }
       .portlet.box.grey-cararra > .portlet-title > .caption > i {
@@ -15205,7 +15205,7 @@ body.stop-scrolling {
   margin: auto;
   padding: 9px;
   margin-bottom: 5px;
-  border: 3px solid;
+  border: 2px solid;
   border-color: #e5e5e5;
   position: relative;
   z-index: 5;
@@ -15223,7 +15223,7 @@ body.stop-scrolling {
   position: relative; }
   .mt-element-step .step-line .mt-step-title:after {
     content: '';
-    height: 3px;
+    height: 2px;
     width: 50%;
     position: absolute;
     background-color: #e5e5e5;
@@ -15233,7 +15233,7 @@ body.stop-scrolling {
     transform: translateY(-100%); }
   .mt-element-step .step-line .mt-step-title:before {
     content: '';
-    height: 3px;
+    height: 2px;
     width: 50%;
     position: absolute;
     background-color: #e5e5e5;
@@ -15260,15 +15260,15 @@ body.stop-scrolling {
   background-color: #32c5d2; }
 
 .mt-element-step .step-line .done .mt-step-number {
-  color: #26C281 !important;
-  border-color: #26C281 !important; }
+  color: #53adfd !important;
+  border-color: #53adfd !important; }
 
 .mt-element-step .step-line .done .mt-step-title,
 .mt-element-step .step-line .done .mt-step-content {
-  color: #26C281 !important; }
+  color: #53adfd !important; }
 
 .mt-element-step .step-line .done .mt-step-title:after, .mt-element-step .step-line .done .mt-step-title:before {
-  background-color: #26C281; }
+  background-color: #53adfd; }
 
 .mt-element-step .step-line .error .mt-step-number {
   color: #E7505A !important;

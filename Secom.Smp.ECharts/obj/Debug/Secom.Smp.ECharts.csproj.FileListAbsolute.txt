@@ -4,3 +4,4 @@ D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.ECharts\bin\Debug\Newtonsoft.Json.
 D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.ECharts\bin\Debug\Newtonsoft.Json.xml
 D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.ECharts\obj\Debug\Secom.Smp.ECharts.dll
 D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.ECharts\obj\Debug\Secom.Smp.ECharts.pdb
+D:\WorkSpace\Secom.Smp\tags\dev_0.1\Secom.Smp.ECharts\obj\Debug\Secom.Smp.ECharts.csprojResolveAssemblyReference.cache

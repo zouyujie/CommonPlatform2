@@ -29,6 +29,10 @@ namespace Secom.Smp.Web.Home.Controllers
         {
             get { return OperatorProvider.Provider.GetCurrent(); }
         }
+        public string UserName
+        {
+            get { return Operator == null ? string.Empty : Operator.UserName; }
+        }
         #endregion
 
         [PublicAuthorize]
@@ -41,27 +45,32 @@ namespace Secom.Smp.Web.Home.Controllers
         #region 其它顶部一级菜单页面
         public ActionResult Maintain()
         {
+            ViewBag.UserName = UserName;
             ViewData["TopMenu"] = _service.GetTopMenu();
             return View();
         }
         public ActionResult SysSet()
         {
+            ViewBag.UserName = UserName;
             ViewData["TopMenu"] = _service.GetTopMenu();
             return View();
         }
         public ActionResult Watch()
         {
+            ViewBag.UserName = UserName;
             ViewData["TopMenu"] = _service.GetTopMenu();
             return View();
         }
         public ActionResult Alarm()
         {
+            ViewBag.UserName = UserName;
             ViewData["TopMenu"] = _service.GetTopMenu();
             return View();
         }
 
         public ActionResult Energy()
         {
+            ViewBag.UserName = UserName;
             ViewData["TopMenu"] = _service.GetTopMenu();
             return View();
         }

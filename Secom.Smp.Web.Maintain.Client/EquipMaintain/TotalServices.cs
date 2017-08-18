@@ -34,7 +34,7 @@ namespace Secom.Smp.Web.Maintain.Client
             feature.Restore().Show(true);
             feature.SaveAsImage().Show(true);
             option.ToolBox().Show(true).SetFeature(feature);
-            option.Grid().Y(60).Y2(30).X(30);
+            option.Grid().Y(60).Y2(30).X(30).X2(10);
             CategoryAxis x = new CategoryAxis();
             x.data= xList;
             option.XAxis(x);
@@ -43,8 +43,8 @@ namespace Secom.Smp.Web.Maintain.Client
             option.YAxis(y);
 
             var tomatoStyle = new ItemStyle();
-            tomatoStyle.Normal().Color("#53adfd").BarBorderRadius(0)
-                .BarBorderColor("#53adfd").BarBorderWidth(6)
+            tomatoStyle.Normal().Color("#53ACFC").BarBorderRadius(0)
+                .BarBorderColor("#53ACFC").BarBorderWidth(6)
                 .Label().Show(true).Position(StyleLabelTyle.insideTop);
             Bar b1 = new Bar("已完成工作量");
             b1.Stack("sum");
@@ -52,8 +52,8 @@ namespace Secom.Smp.Web.Maintain.Client
             b1.data = yList1;
 
             var forecastStyle = new ItemStyle();
-            forecastStyle.Normal().Color("#e9edef").BarBorderRadius(0)
-                .BarBorderColor("#e9edef").BarBorderWidth(6)
+            forecastStyle.Normal().Color("#F4F4F6").BarBorderRadius(0)
+                .BarBorderColor("#F4F4F6").BarBorderWidth(6)
                 .Label().Show(true).Position(StyleLabelTyle.top)
                 .Formatter(new JRaw(@"function (params) {
                             for (var i = 0, l = option.xAxis[0].data.length; i < l; i++) {
@@ -62,7 +62,7 @@ namespace Secom.Smp.Web.Maintain.Client
                                 }
                             }
                         }"))
-                        .TextStyle().Color("#e9edef");
+                        .TextStyle().Color("#53ACFC");
 
             Bar b2 = new Bar("工作量总数");
             b2.Stack("sum");

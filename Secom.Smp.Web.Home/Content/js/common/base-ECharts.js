@@ -34,6 +34,7 @@ function ResizeECharts(ids) {
             window.onresize = function () {
                 for (var x=0;x<length;x++) {
                     var chart = document.getElementById(ids[x]);
+                    console.log(ids[x]);
                     var myChart = echarts.init(chart);
                     myChart.resize();
                 }

@@ -85,6 +85,7 @@
     <Compile Include="Extend\Ext_Datetime.cs" />
     <Compile Include="Extend\Ext_String.cs" />
     <Compile Include="File\FileHelper.cs" />
+    <Compile Include="HtmlHelper\HtmlExtensions.cs" />
     <Compile Include="Json\JsonTools.cs" />
     <Compile Include="Log\Logger.cs" />
     <Compile Include="SysLicence.cs" />

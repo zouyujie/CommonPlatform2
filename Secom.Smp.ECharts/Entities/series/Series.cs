@@ -62,13 +62,18 @@ namespace Secom.Smp.ECharts.Entities.series
 
 
         public bool? hoverAnimation { get; set; }
+        public bool? avoidLabelOverlap { get; set; }
 
         public Series HoverAnimation(bool hoverAnimation)
         {
             this.hoverAnimation = hoverAnimation;
             return this;
         }
-
+        public Series AvoidLabelOverlap(bool avoidLabelOverlap)
+        {
+            this.avoidLabelOverlap = avoidLabelOverlap;
+            return this;
+        }
 
         public Series Id(string id)
         {

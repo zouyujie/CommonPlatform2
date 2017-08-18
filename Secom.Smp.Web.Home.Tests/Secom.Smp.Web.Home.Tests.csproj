@@ -102,6 +102,10 @@
       <Project>{06df430e-0990-4203-91f7-5642eed870a2}</Project>
       <Name>Secom.Smp.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Secom.Smp.Web.Base\Secom.Smp.Web.Base.csproj">
+      <Project>{c39b7c1d-4d5c-42d3-bd6a-ef5630bf07bd}</Project>
+      <Name>Secom.Smp.Web.Base</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Secom.Smp.Web.Home\Secom.Smp.Web.Home.csproj">
       <Project>{2496366D-46C9-4806-B089-F41D4F6F2F72}</Project>
       <Name>Secom.Smp.Web.Home</Name>

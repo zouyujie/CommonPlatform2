@@ -112,6 +112,14 @@
     <Compile Include="Areas\Admin\Controllers\FileUploadController.cs" />
     <Compile Include="Areas\Admin\Controllers\KeepPlanController.cs" />
     <Compile Include="Areas\Admin\Controllers\RepairsListController.cs" />
+    <Compile Include="Areas\BaseInfo\BaseInfoAreaRegistration.cs" />
+    <Compile Include="Areas\BaseInfo\Controllers\AreaController.cs" />
+    <Compile Include="Areas\BaseInfo\Controllers\BranchController.cs" />
+    <Compile Include="Areas\BaseInfo\Controllers\BuildController.cs" />
+    <Compile Include="Areas\BaseInfo\Controllers\CollectorCMDController.cs" />
+    <Compile Include="Areas\BaseInfo\Controllers\CollectorController.cs" />
+    <Compile Include="Areas\BaseInfo\Controllers\ItemController.cs" />
+    <Compile Include="Areas\BaseInfo\Controllers\UnitsController.cs" />
     <Compile Include="Models\CustomerView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -128,6 +136,15 @@
     <Folder Include="Areas\Admin\Views\FileUpload\" />
     <Folder Include="Areas\Admin\Views\KeepPlan\" />
     <Folder Include="Areas\Admin\Views\RepairsList\" />
+    <Folder Include="Areas\BaseInfo\Models\" />
+    <Folder Include="Areas\BaseInfo\Views\Area\" />
+    <Folder Include="Areas\BaseInfo\Views\Branch\" />
+    <Folder Include="Areas\BaseInfo\Views\Build\" />
+    <Folder Include="Areas\BaseInfo\Views\CollectorCMD\" />
+    <Folder Include="Areas\BaseInfo\Views\Collector\" />
+    <Folder Include="Areas\BaseInfo\Views\Item\" />
+    <Folder Include="Areas\BaseInfo\Views\Shared\" />
+    <Folder Include="Areas\BaseInfo\Views\Units\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +177,9 @@
     <Content Include="Web.Release.Config">
       <DependentUpon>Web.Config</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\BaseInfo\Views\web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

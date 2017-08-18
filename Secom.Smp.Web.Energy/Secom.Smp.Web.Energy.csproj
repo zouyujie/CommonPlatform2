@@ -96,6 +96,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Energy\Controllers\ElectricBranchController.cs" />
+    <Compile Include="Areas\Energy\Controllers\ElectricItemController.cs" />
+    <Compile Include="Areas\Energy\Controllers\ElectricUnitController.cs" />
+    <Compile Include="Areas\Energy\Controllers\GasController.cs" />
+    <Compile Include="Areas\Energy\Controllers\ReportController.cs" />
+    <Compile Include="Areas\Energy\Controllers\WaterController.cs" />
+    <Compile Include="Areas\Energy\EnergyAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -113,6 +120,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Energy\Models\" />
+    <Folder Include="Areas\Energy\Views\ElectricBranch\" />
+    <Folder Include="Areas\Energy\Views\ElectricUnit\" />
+    <Folder Include="Areas\Energy\Views\Electric\" />
+    <Folder Include="Areas\Energy\Views\Gas\" />
+    <Folder Include="Areas\Energy\Views\Report\" />
+    <Folder Include="Areas\Energy\Views\Shared\" />
+    <Folder Include="Areas\Energy\Views\Water\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -125,6 +140,9 @@
       <Project>{1506644f-48d7-4bd9-91d2-def462047340}</Project>
       <Name>Secom.Smp.Web.Energy.Client</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Energy\Views\web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

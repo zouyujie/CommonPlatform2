@@ -1029,6 +1029,32 @@ function clone(myObj) {
 
     return myNewObj;
 }
+//模板批量绑定方法(ajax数据请求地址，模板id数组，容器id数组）
+function tmplBindList(url, tmpIds, containerIds) {
+    $.getJSON(url, function (data) {
+        if (tmpIds != undefined && tmpIds != null && tmpIds.length > 0) {
+            var length=tmpIds.length;
+            for (var v = 0; v < length; v++) {
+                // Remove current set of  template items
+                $("#" + containerIds[v]).empty();
+                // Render the template with the  data and insert the rendered HTML under the "monthAlarmInfo" element
+                $("#" + tmpIds[v]).tmpl(data).appendTo('#' + containerIds[v]);
+            }
+        }
+    })
+}
+function tmplBind(url, tmpId, containerId, loadDiv) {
+    if (loadDiv != undefined) {
+        $("#" + loadDiv).css("display", "");
+    }
+    $.getJSON(url, function (data) {
+        $("#" + containerId).empty();
+        $("#" + tmpId).tmpl(data).appendTo('#' + containerId);
+        if (loadDiv != undefined) {
+            $("#" + loadDiv).css("display", "none");
+        }
+    });
+}
 //根据URL获取Id
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");

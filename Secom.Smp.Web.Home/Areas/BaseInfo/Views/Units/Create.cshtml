@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "用户列表";
+    ViewBag.ParentTitle = "系统管理";
+    Layout = "~/Views/Shared/_Page.cshtml";
+}
+
+<div class="portlet-body form">
+    <!-- BEGIN FORM-->
+    <form action="#" class="horizontal-form">
+        <div class="form-body">
+            <h3 class="form-section">单位信息</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">单位编号</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="10010011">
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group has-error">
+                        <label class="control-label">单位名称</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="天虹商场">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">所属区域</label>
+                        <select class="form-control">
+                            <option value="">请选择</option>
+                            <option value="">全国</option>
+                            <option value="">广东</option>
+                            <option value="">上海</option>
+                        </select>
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">地址</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="Lim">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <!--/row-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">单位性质</label>
+                        <select class="form-control">
+                            <option value="">请选择</option>
+                            <option value="">商超</option>
+                            <option value="">医院</option>
+                            <option value="">机场</option>
+                        </select>
+                        <span class="help-block">选择单位所属性质</span>
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">简介</label>
+                        <input type="text" class="form-control" placeholder="这个信息有没有必要呢">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">负责人</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="Chee Kin">
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">联系电话</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="Lim">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+
+            <h3 class="form-section">操作信息</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>创建人</label>
+                        <input type="text" class="form-control" placeholder="Nick">
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>创建时间</label>
+                        <input type="text" class="form-control" placeholder="2017-08-08">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>修改人</label>
+                        <input type="text" class="form-control" placeholder="Nick">
+                    </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>修改时间</label>
+                        <input type="text" class="form-control" placeholder="2017-08-08">
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+        </div>
+        <div class="form-actions right">
+            <button type="button" class="btn default">取消</button>
+            <button type="submit" class="btn blue">
+                <i class="fa fa-check"></i> 保存
+            </button>
+        </div>
+    </form>
+    <!-- END FORM-->
+</div>
+

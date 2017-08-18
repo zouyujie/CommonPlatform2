@@ -6,8 +6,8 @@
 @using Secom.Smp.ViewModel.Home;
 <div class="page-content-body" style="margin-top:10px;">
     <div class="row">
-        <div class="col-md-3 col-lg-2">
-            <div class="portlet box grey-salt">
+        <div class="col-md-3 col-lg-2 col-xs-4" style="padding-right:0px;padding-left:0px;">
+            <div class="portlet box grey-cararra">
                 <div class="portlet-title">
                     <div class="caption">
                         <i class="fa fa-gift"></i>基本信息
@@ -17,11 +17,13 @@
                         <a href="" class="fullscreen" data-original-title="" title="全屏"> </a>
                     </div>
                 </div>
-                <div class="portlet-body" style="display: block;height:260px;">
-                    <img src="@ViewBag.InfoImg" class="img-responsive img-rounded" />
+                <div class="portlet-body" style="display: block;height:280px;padding-top:4px;">
+                    <div class="row">
+                        <img src="@ViewBag.InfoImg" class="img-responsive img-rounded" />
+                    </div>
                 </div>
             </div>
-            <div class="portlet box grey-steel">
+            <div class="portlet box grey-cararra">
                 <div class="portlet-title">
                     <div class="caption">
                         <i class="fa fa-gift"></i>简介
@@ -31,12 +33,14 @@
                         <a href="" class="fullscreen" data-original-title="" title="全屏"> </a>
                     </div>
                 </div>
-                <div class="portlet-body" style="display: block;">
-                   @Html.Raw(ViewBag.Introduction)
+                <div class="portlet-body">
+                    <div class="row" style="margin:0px;padding:0px;">
+                        @Html.Raw(ViewBag.Introduction)
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-9 col-lg-10">
+        <div class="col-md-9 col-lg-10 col-xs-8" style="padding-left:20px;">
             <div class="portlet box grey-cararra">
                 <div class="portlet-title">
                     <div class="caption">
@@ -47,34 +51,36 @@
                         <a href="" class="fullscreen" data-original-title="" title="全屏"> </a>
                     </div>
                 </div>
-                <div class="portlet-body" style="display: block;min-height:260px;">
-                    <div class="col-md-4">
-                        <div id="repairTotal" style="width:100%;height:160px;"></div>
-                        <div class="totalPad">
-                            <div class="head">维修统计</div>
-                            <div class="done repair"><span>已完成：</span> @_RepairOrder[0].RepairFinish 单</div>
-                            <div class="noDone"><span>未完成：</span>@_RepairOrder[0].RepairNoFinish 单</div>
+                <div class="portlet-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div id="repairTotal" class="maintainChart"></div>
+                            <div class="totalPad">
+                                <div class="head">维修统计</div>
+                                <div class="done repair"><span>已完成：</span> @_RepairOrder[0].RepairFinish 单</div>
+                                <div class="noDone"><span>未完成：</span>@_RepairOrder[0].RepairNoFinish 单</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div id="visitTotal" style="width:100%;height:160px;"></div>
-                        <div class="totalPad">
-                            <div class="head">巡检统计</div>
-                            <div class="done visit"><span>已完成：</span>@_RepairOrder[1].RepairFinish 单</div>
-                            <div class="noDone"><span>未完成：</span>@_RepairOrder[1].RepairNoFinish 单</div>
+                        <div class="col-md-4">
+                            <div id="visitTotal" class="maintainChart"></div>
+                            <div class="totalPad">
+                                <div class="head">巡检统计</div>
+                                <div class="done visit"><span>已完成：</span>@_RepairOrder[1].RepairFinish 单</div>
+                                <div class="noDone"><span>未完成：</span>@_RepairOrder[1].RepairNoFinish 单</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div id="maintainTotal" style="width:100%;height:160px;"></div>
-                        <div class="totalPad">
-                            <div class="head">保养统计</div>
-                            <div class="done maintain"><span>已完成：</span>@_RepairOrder[2].RepairFinish 单</div>
-                            <div class="noDone"><span>未完成：</span>@_RepairOrder[2].RepairNoFinish 单</div>
+                        <div class="col-md-4">
+                            <div id="maintainTotal" class="maintainChart"></div>
+                            <div class="totalPad">
+                                <div class="head">保养统计</div>
+                                <div class="done maintain"><span>已完成：</span>@_RepairOrder[2].RepairFinish 单</div>
+                                <div class="noDone"><span>未完成：</span>@_RepairOrder[2].RepairNoFinish 单</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="portlet box grey-salsa">
+            <div class="portlet box grey-cararra">
                 <div class="portlet-title">
                     <div class="caption">
                         <i class="fa fa-gift"></i>安全管理
@@ -84,61 +90,93 @@
                         <a href="" class="fullscreen" data-original-title="" title="全屏"> </a>
                     </div>
                 </div>
-                <div class="portlet-body" style="display: block;min-height:400px; height:400px;">
-                    <div class="col-md-6">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">暖通空调</h3>
-                        </div>
-                        <div class="panel-body">
-                            <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_airCondition"></table>
-                        </div>
-                    </div>
-                    <div class="panel col-md-6">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">公共照明</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="dataTables_wrapper no-footer">
-                                <div class="table-scrollable">
-                                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_illumination">
-                                        <thead><tr role="row"><th>名称</th><th>一号楼</th><th>二号楼</th><th>三号楼</th><th>四号楼</th></tr></thead>
-                                        <tbody>
-                                            <tr role="row" style="height:76px;"><td>支路数</td><td></td><td></td><td></td><td></td></tr>
-                                        </tbody>
-                                    </table>
+                <div class="portlet-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">暖通空调</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="dataTables_wrapper no-footer">
+                                    <div class="table-scrollable">
+                                        <table role="grid" class="table table-striped table-bordered table-hover table-checkable order-column" id="table_airCondition">
+                                            <thead><tr role="row"><th class="sorting_disabled">名称</th><th>冷机</th><th>新风机组</th><th>组合空调</th><th>吊装空调</th></tr></thead>
+                                            <tbody id="airConditionContainer">
+                                                <tr class="odd" id="table_airCondition_processing" style="display:none;"><td colspan="5" class="dataTables_empty" valign="top">Loading...</td></tr>
+                                            </tbody>
+                                        </table>
+                                        <script id="airConditionTemplate" type="text/x-jquery-tmpl">
+                                            <tr role="row" class="odd">
+                                                <td>台数</td>
+                                                <td><span>${TName0}</span>/${TName}</td>
+                                                <td><span>${TName1}</span>/${TName2}</td>
+                                                <td><span>${TName3}</span>/${TName4}</td>
+                                                <td><span>${TName5}</span>/${TName6}</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>报警</td><td>${TName7}</td><td>${TName8}</td><td>${TName9}</td><td>${TName10}</td>
+                                            </tr>
+                                        </script>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">变配电</h3>
+                        <div class="panel col-md-6">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">公共照明</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="dataTables_wrapper no-footer">
+                                    <div class="table-scrollable">
+                                        <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_publicLighting">
+                                            <thead><tr role="row"><th>名称</th><th>一号楼</th><th>二号楼</th><th>三号楼</th><th>四号楼</th></tr></thead>
+                                            <tbody id="publicLightingContainer">
+                                                <tr class="odd" id="table_publicLighting_processing" style="display:none;"><td colspan="5" class="dataTables_empty" valign="top">Loading...</td></tr>
+                                             </tbody>
+                                        </table>
+                                        <script id="publicLightingTemplate" type="text/x-jquery-tmpl">
+                                            <tr role="row" style="height:72px;">
+                                                <td>支路数</td>
+                                                <td><span>${TName0}</span>/${TName}</td>
+                                                <td><span>${TName1}</span>/${TName2}</td>
+                                                <td><span>${TName3}</span>/${TName4}</td>
+                                                <td><span>${TName5}</span>/${TName6}</td>
+                                            </tr>
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="panel-body"> <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_transformer"></table>  </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">医用冷链</h3>
+                        <div class="col-md-6">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">变配电</h3>
+                            </div>
+                            <div class="panel-body"> <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_transformer"></table>  </div>
                         </div>
-                        <div class="panel-body"> <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_coldChains"></table>  </div>
+                        <div class="col-md-6">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">医用冷链</h3>
+                            </div>
+                            <div class="panel-body"> <table class="table table-striped table-bordered table-hover table-checkable order-column" id="table_coldChains"></table>  </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="portlet box grey-salsa">
+            <div class="portlet box grey-cararra">
                 <div class="portlet-title">
                     <div class="caption">
                         <i class="fa fa-gift"></i>能耗统计
                     </div>
                     <div class="tools">
-                        <button id="btnElectricity" type="button" class="btn btn-info btn-sm mt-ladda-btn ladda-button btn-circle" data-style="expand-right" data-size="s">
+                        <button id="btnElectricity" type="button" onclick="initAlarmTotal(0)" class="btn btn-info btn-sm mt-ladda-btn ladda-button btn-circle" data-style="expand-right" data-size="s">
                             <span class="ladda-label">电耗</span>
                             <span class="ladda-spinner"></span>
                         </button>
-                        <button id="btnWater" type="button" class="btn btn-info btn-sm mt-ladda-btn ladda-button btn-circle" data-style="expand-right" data-size="s">
+                        <button id="btnWater" type="button" onclick="initAlarmTotal(1)" class="btn btn-info btn-sm mt-ladda-btn ladda-button btn-circle" data-style="expand-right" data-size="s">
                             <span class="ladda-label">水耗</span>
                             <span class="ladda-spinner"></span>
                         </button>
-                        <button id="btnAir" type="button" class="btn btn-info btn-sm mt-ladda-btn ladda-button btn-circle" data-style="expand-right" data-size="s">
+                        <button id="btnAir" type="button" onclick="initAlarmTotal(2)" class="btn btn-info btn-sm mt-ladda-btn ladda-button btn-circle" data-style="expand-right" data-size="s">
                             <span class="ladda-label">气耗</span>
                             <span class="ladda-spinner"></span>
                         </button>
@@ -146,12 +184,71 @@
                         <a href="" class="fullscreen" data-original-title="" title="全屏"> </a>
                     </div>
                 </div>
-                <div class="portlet-body" style="display: block;min-height:260px;">
-                    <div class="col-md-6">
-                        <div id="monthEC" style="width:100%;height:160px;"></div>
+                <div class="portlet-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="alarmChart" id="monthEC"></div>
+                        </div>
+                        <div class="col-md-3 alarmInfo" id="monthAlarmInfo">
+                        </div>
+                        <script id="monthTemplate" type="text/x-jquery-tmpl">
+                            <ul>
+                                <li>
+                                    <i style="background-color:#FA6F74"></i>
+                                    <ul><li>空调用电</li><li><span>{{= TName}} kWh</span><span>比上月高{{= TName0}}</span></li></ul>
+                                </li>
+                                <li>
+                                    <i style="background-color:#FDD566"></i>
+                                    <ul><li>照明插座用电</li><li><span>${TName1} kWh</span><span>比上月高${TName2}</span></li></ul>
+                                </li>
+                                <li>
+                                    <i style="background-color:#6ED1A2"></i>
+                                    <ul><li>动力用电</li><li><span>${TName3} kWh</span><span>比上月高${TName4}</span></li></ul>
+                                </li>
+                                <li>
+                                    <i style="background-color:#6CBEF6"></i>
+                                    <ul><li>特殊用电</li><li><span>${TName5} kWh</span><span>比上月高${TName6}</span></li></ul>
+                                </li>
+                            </ul>
+                        </script>
+                        <div class="col-md-3">
+                            <div class="alarmChart" id="yearEC"></div>
+                        </div>
+                        <div class="col-md-3 alarmInfo" id="yearAlarmInfo">
+                        </div>
+                        <script id="yearTemplate" type="text/x-jquery-tmpl">
+                            <ul id="yearAlarmInfo">
+                                <li>
+                                    <i style="background-color:#FA6F74"></i>
+                                    <ul><li>空调用电</li><li><span>${TName7} kWh</span><span>比上年高${TName8}</span></li></ul>
+                                </li>
+                                <li>
+                                    <i style="background-color:#FDD566"></i>
+                                    <ul><li>照明插座用电</li><li><span>${TName9} kWh</span><span>比上年高${TName10}</span></li></ul>
+                                </li>
+                                <li>
+                                    <i style="background-color:#6ED1A2"></i>
+                                    <ul><li>动力用电</li><li><span>${TName11} kWh</span><span>比上年高${TName12}</span></li></ul>
+                                </li>
+                                <li>
+                                    <i style="background-color:#6CBEF6"></i>
+                                    <ul><li>特殊用电</li><li><span>${TName13} kWh</span><span>比上年高${TName14}</span></li></ul>
+                                </li>
+                            </ul>
+                        </script>
                     </div>
-                    <div class="col-md-6">
-                        <div id="yearEC" style="width:100%;height:160px;"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alarmChart" id="monthECNew"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alarmChart" id="yearECNew"></div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="divAlarmTotal" style="width:100%;height:260px;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
