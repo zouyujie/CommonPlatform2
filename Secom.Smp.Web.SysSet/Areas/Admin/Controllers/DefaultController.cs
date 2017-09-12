@@ -23,7 +23,6 @@ using System;
 
 namespace Secom.Smp.Web.SysSet.Areas.Admin.Controllers
 {
-    [LogException]
     public class DefaultController : BaseController
     {
         private MyContext db = new MyContext();
